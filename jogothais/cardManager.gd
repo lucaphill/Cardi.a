@@ -12,7 +12,7 @@ func _ready() -> void:
 	screen_size = get_viewport_rect().size
 
 # Verifica a todo frame se está clicando em alguma carta
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if card_being_dragged:
 		var mouse_pos = get_global_mouse_position()
 		card_being_dragged.position = Vector2(clamp(mouse_pos.x, 0, screen_size.x), 
@@ -35,8 +35,9 @@ func start_drag(card):
 	card.scale = Vector2(1, 1)
 
 func finish_drag():
-	card_being_dragged.scale = Vector2(1.05, 1.05)
-	card_being_dragged = null
+	if card_being_dragged:
+		card_being_dragged.scale = Vector2(1.05, 1.05)
+		card_being_dragged = null
 	
 
 # conecta o sinal das cartas ao manager
