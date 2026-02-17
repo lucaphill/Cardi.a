@@ -3,6 +3,8 @@ extends Node2D
 signal hovered
 signal hovered_off
 
+var hand_position
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Conecta a carta com o manager (TODAS AS CARTAS TEM QUE SER FILHAS DO MANAGER)
