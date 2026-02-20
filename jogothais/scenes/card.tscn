@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://8ypthd13ouk3"]
 
-[ext_resource type="Script" uid="uid://dpjvd4bgnfl11" path="res://card.gd" id="1_rjlel"]
+[ext_resource type="Script" uid="uid://dpjvd4bgnfl11" path="res://scripts/card.gd" id="1_rjlel"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_kikvd"]
 load_path = "res://.godot/imported/CardTemplate.png-c56a45bee54f0b68f02147d98c0a25a6.ctex"
