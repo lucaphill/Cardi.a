@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="jogothais"
-run/main_scene="uid://cbv0s5n0s2ofc"
+run/main_scene="uid://dbfa4mxkvdbs6"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://assents/icon.svg"
 
