@@ -9,6 +9,7 @@ load_path = "res://.godot/imported/CardTemplate.png-c56a45bee54f0b68f02147d98c0a
 size = Vector2(179.00006, 263.00006)
 
 [node name="Cards" type="Node2D" unique_id=723870739]
+position = Vector2(90, 630)
 script = ExtResource("1_rjlel")
 
 [node name="CardBase" type="Sprite2D" parent="." unique_id=1415810203]

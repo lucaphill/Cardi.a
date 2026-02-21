@@ -2,6 +2,7 @@ extends Node2D
 
 const COLLISION_MASK_CARD = 1
 const COLLISION_MASK_CARD_SLOT = 2
+const DEFALT_CARD_MOVE_SPEED = 0.1
 
 # definindo variaveis
 var card_being_dragged
@@ -13,6 +14,7 @@ var player_hand_reference
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
 	player_hand_reference = $"../PlayerHand"
+	$"../InputManager".connect("left_mouse_buttton_released", on_left_click_release)
 
 # Verifica a todo frame se está clicando em alguma carta
 func _process(_delta: float) -> void:
@@ -21,16 +23,6 @@ func _process(_delta: float) -> void:
 		card_being_dragged.position = Vector2(clamp(mouse_pos.x, 0, screen_size.x), 
 			clamp(mouse_pos.y, 0, screen_size.y))
 
-
-# Detecta quando o botão esquerdo for clicado 
-func _input(event):
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
-		if event.pressed:
-			var card = raycast_check_for_card() # chamando a função de identificação
-			if card:
-				start_drag(card)
-		else: 
-			finish_drag()
 
 # ANIMAÇÃO PARA QUANDO COMEÇAMOS A PEGAR UMA CARTA
 func start_drag(card):
@@ -49,7 +41,7 @@ func finish_drag():
 			card_being_dragged.get_node("Area2D/CollisionShape2D").disabled = true
 			card_slot_found.card_in_slot = true
 		else:
-			player_hand_reference.add_card_to_hand(card_being_dragged)
+			player_hand_reference.add_card_to_hand(card_being_dragged, DEFALT_CARD_MOVE_SPEED)
 		card_being_dragged = null
 	
 
@@ -110,9 +102,13 @@ func get_card_with_highest_z_index(cards):
 			
 	return highest_z_card
 
-#
+
+func on_left_click_release():
+	if card_being_dragged:
+		finish_drag()
+
+
 # SLOD DE CARTAS, MEXENDO COM O SLOT DE CARTAS
-#
 func raycast_check_for_card_slot():
 	var space_state = get_world_2d().direct_space_state
 	var parameters = PhysicsPointQueryParameters2D.new()

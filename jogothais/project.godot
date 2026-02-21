@@ -13,12 +13,13 @@ config_version=5
 config/name="jogothais"
 run/main_scene="uid://cbv0s5n0s2ofc"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://assents/icon.svg"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
+window/stretch/mode="viewport"
 window/vsync/vsync_mode=0
 
 [physics]
@@ -27,4 +28,5 @@ window/vsync/vsync_mode=0
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=3
 rendering_device/driver.windows="d3d12"
