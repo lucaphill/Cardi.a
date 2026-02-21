@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dbfa4mxkvdbs6"]
+
+[ext_resource type="Script" uid="uid://ccab81eyhxo7n" path="res://scripts/main_menu.gd" id="1_hwpy7"]
+
+[node name="main_menu" type="Node2D" unique_id=1228729446]
+script = ExtResource("1_hwpy7")
+
+[node name="botton_mannager" type="Control" parent="." unique_id=128460098]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="start" type="Button" parent="botton_mannager" unique_id=644735926]
+layout_mode = 0
+offset_left = 498.0
+offset_top = 324.0
+offset_right = 740.0
+offset_bottom = 399.0
+text = "start"
+
+[node name="options" type="Button" parent="botton_mannager" unique_id=36381430]
+layout_mode = 0
+offset_left = 492.0
+offset_top = 434.0
+offset_right = 735.0
+offset_bottom = 512.0
+text = "options"
+
+[node name="quit" type="Button" parent="botton_mannager" unique_id=248780505]
+layout_mode = 0
+offset_left = 497.0
+offset_top = 545.0
+offset_right = 735.0
+offset_bottom = 632.0
+text = "quit"
+
+[connection signal="pressed" from="botton_mannager/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="botton_mannager/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="botton_mannager/quit" to="." method="_on_quit_pressed"]

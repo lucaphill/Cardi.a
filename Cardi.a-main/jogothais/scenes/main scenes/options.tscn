@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bnylha02h18gx"]
+
+[ext_resource type="FontFile" uid="uid://dw6wfk8i82tbv" path="res://fonts/VCR_OSD_MONO_1.001.ttf" id="1_84gng"]
+[ext_resource type="Script" uid="uid://cclkeuk4n8y5v" path="res://scripts/options.gd" id="1_dtsn1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6vb07"]
+font = ExtResource("1_84gng")
+font_size = 32
+
+[node name="options" type="Node2D" unique_id=2060393255]
+script = ExtResource("1_dtsn1")
+
+[node name="Button_manager" type="Control" parent="." unique_id=1780282140]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="back" type="Button" parent="Button_manager" unique_id=1345512660]
+layout_mode = 0
+offset_left = 521.0
+offset_top = 461.0
+offset_right = 688.0
+offset_bottom = 519.0
+text = "voltar"
+
+[node name="Label" type="Label" parent="." unique_id=1539850499]
+offset_left = 205.0
+offset_top = 143.0
+offset_right = 1031.0
+offset_bottom = 204.0
+text = "Opções 
+(talvez entre no game, somente teste)"
+label_settings = SubResource("LabelSettings_6vb07")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Button_manager/back" to="." method="_on_back_pressed"]
