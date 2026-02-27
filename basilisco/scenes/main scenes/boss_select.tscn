@@ -2,13 +2,29 @@
 
 [ext_resource type="FontFile" uid="uid://dw6wfk8i82tbv" path="res://fonts/VCR_OSD_MONO_1.001.ttf" id="1_2nrry"]
 [ext_resource type="Script" uid="uid://4y8otdogw7ia" path="res://scripts/boss_select.gd" id="1_i14ug"]
+[ext_resource type="PackedScene" uid="uid://b05j34cynjhjg" path="res://scenes/fade_in.tscn" id="2_1o3hn"]
+[ext_resource type="PackedScene" uid="uid://gpmt15d7adk8" path="res://scenes/fade_out.tscn" id="3_b63hh"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_6apk2"]
-font = ExtResource("1_2nrry")
-font_size = 32
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1o3hn"]
+bg_color = Color(0, 0.50050473, 0.3637334, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
 
 [node name="boss_select" type="Node2D" unique_id=938538666]
 script = ExtResource("1_i14ug")
+
+[node name="Trascicoes" type="CanvasLayer" parent="." unique_id=2127032376]
+
+[node name="Fade_in" parent="Trascicoes" unique_id=2070389534 instance=ExtResource("2_1o3hn")]
+
+[node name="Fade_in_Timer" type="Timer" parent="Trascicoes/Fade_in" unique_id=1634209555]
+
+[node name="Fade_out" parent="Trascicoes" unique_id=971055919 instance=ExtResource("3_b63hh")]
+
+[node name="Fade_out_Timer" type="Timer" parent="Trascicoes/Fade_out" unique_id=1779456337]
 
 [node name="button_manager" type="Control" parent="." unique_id=881776628]
 layout_mode = 3
@@ -16,35 +32,73 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="HBoxContainer" type="HBoxContainer" parent="button_manager" unique_id=1091339335]
+layout_mode = 0
+offset_left = 325.0
+offset_top = 135.0
+offset_right = 955.0
+offset_bottom = 462.0
+theme_override_constants/separation = 11
+alignment = 1
+
+[node name="Button_chat" type="Button" parent="button_manager/HBoxContainer" unique_id=1572027551]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/outline_size = 11
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_1o3hn")
+text = "ChatGPT"
+
+[node name="Button_gemini" type="Button" parent="button_manager/HBoxContainer" unique_id=1515140605]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Gemini"
+
+[node name="Button_cloud" type="Button" parent="button_manager/HBoxContainer" unique_id=1503728655]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Cloude"
+
 [node name="back" type="Button" parent="button_manager" unique_id=351973294]
 layout_mode = 0
-offset_left = 525.0
-offset_top = 503.0
-offset_right = 755.0
-offset_bottom = 586.0
+offset_left = 517.0
+offset_top = 611.0
+offset_right = 747.0
+offset_bottom = 694.0
 pivot_offset = Vector2(115, 0)
 text = "VOLTAR"
 
 [node name="test_room" type="Button" parent="button_manager" unique_id=1522387701]
 layout_mode = 0
-offset_left = 527.0
-offset_top = 391.0
-offset_right = 763.0
-offset_bottom = 471.0
+offset_left = 514.0
+offset_top = 497.0
+offset_right = 750.0
+offset_bottom = 577.0
 text = "sala de teste
 das cartas"
 
-[node name="Label" type="Label" parent="." unique_id=821464296]
-offset_left = 425.0
-offset_top = 221.0
-offset_right = 856.0
-offset_bottom = 282.0
+[node name="Label" type="RichTextLabel" parent="." unique_id=747699384]
+offset_left = 420.0
+offset_top = 42.0
+offset_right = 860.0
+offset_bottom = 103.0
 pivot_offset = Vector2(215, 0)
-text = "SALA DE ESCOLHA DE BOSS
-(NOME PROVISÓRIO)"
-label_settings = SubResource("LabelSettings_6apk2")
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 14
+theme_override_constants/shadow_offset_x = 1
+theme_override_fonts/normal_font = ExtResource("1_2nrry")
+theme_override_font_sizes/normal_font_size = 36
+bbcode_enabled = true
+text = "[wave amp=10 freq=2]Escolha a I.A.[/wave]"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[connection signal="timeout" from="Trascicoes/Fade_in/Fade_in_Timer" to="." method="_on_fade_in_timer_timeout"]
+[connection signal="timeout" from="Trascicoes/Fade_out/Fade_out_Timer" to="." method="_on_fade_out_timer_timeout"]
+[connection signal="pressed" from="button_manager/HBoxContainer/Button_chat" to="." method="_on_button_chat_pressed"]
+[connection signal="pressed" from="button_manager/HBoxContainer/Button_gemini" to="." method="_on_button_gemini_pressed"]
+[connection signal="pressed" from="button_manager/HBoxContainer/Button_cloud" to="." method="_on_button_cloud_pressed"]
 [connection signal="pressed" from="button_manager/back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="button_manager/test_room" to="." method="_on_test_room_pressed"]

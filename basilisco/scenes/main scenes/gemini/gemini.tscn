@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://3v1fa45q20ut"]
+
+[ext_resource type="Script" uid="uid://c6kmrpdmd00hm" path="res://scripts/gemini.gd" id="1_5sutp"]
+[ext_resource type="Texture2D" uid="uid://gf6kft31mbqa" path="res://assents/sprites/quit button/quit_1.jpeg" id="2_pvh61"]
+[ext_resource type="Texture2D" uid="uid://cxaycwpa8ra4d" path="res://assents/sprites/quit button/quit_2.jpeg" id="3_yaqkf"]
+[ext_resource type="Texture2D" uid="uid://gq5ncggfymbp" path="res://assents/sprites/quit button/quitt_3.jpeg" id="4_rgw66"]
+[ext_resource type="Shader" uid="uid://dc85mm0slomk4" path="res://shaders/space.gdshader" id="5_soj72"]
+[ext_resource type="Texture2D" uid="uid://n4uegk1w4egp" path="res://assents/sprites/gemini_ultra.png" id="6_ygjv2"]
+[ext_resource type="PackedScene" uid="uid://cc0xc8sp78ywm" path="res://scenes/main scenes/gemini/cartas_gemini.tscn" id="7_5sutp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_qoddq"]
+shader = ExtResource("5_soj72")
+shader_parameter/bg_color = Color(0, 0, 0, 1)
+shader_parameter/offset = Vector2(0, 0)
+shader_parameter/bigStarSlow = 2.0
+shader_parameter/mediumStarSlow = 6.0
+shader_parameter/smallStarSlow = 8.0
+shader_parameter/smallStarAmount = 0.002
+shader_parameter/mediumStarAmount = 0.01
+shader_parameter/bigStarAmount = 0.02
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5sutp"]
+size = Vector2(695, 409.5)
+
+[node name="Gemini" type="Node2D" unique_id=698262277]
+script = ExtResource("1_5sutp")
+
+[node name="Control" type="Control" parent="." unique_id=1159713315]
+z_index = 96
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="voltar" type="TextureButton" parent="Control" unique_id=739412774]
+layout_mode = 0
+offset_left = 1029.0
+offset_top = 631.0
+offset_right = 1229.0
+offset_bottom = 691.0
+texture_normal = ExtResource("2_pvh61")
+texture_pressed = ExtResource("3_yaqkf")
+texture_hover = ExtResource("4_rgw66")
+
+[node name="Fundo" type="CanvasLayer" parent="." unique_id=824027248]
+layer = -1
+visible = false
+
+[node name="space" type="ColorRect" parent="Fundo" unique_id=1859617747]
+material = SubResource("ShaderMaterial_qoddq")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1934404951]
+offset_right = 402.0
+offset_bottom = 720.0
+texture = ExtResource("6_ygjv2")
+
+[node name="Cartas_Gemini" parent="." unique_id=1213258145 instance=ExtResource("7_5sutp")]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=823335888]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1730348976]
+position = Vector2(840, 276)
+shape = SubResource("RectangleShape2D_5sutp")
+debug_color = Color(1, 0, 0, 0.41960785)
+
+[node name="Calculo" type="RichTextLabel" parent="." unique_id=771581359]
+offset_left = 672.0
+offset_top = 220.0
+offset_right = 1007.0
+offset_bottom = 319.0
+theme_override_font_sizes/normal_font_size = 48
+text = "o"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Control/voltar" to="." method="_on_voltar_pressed"]

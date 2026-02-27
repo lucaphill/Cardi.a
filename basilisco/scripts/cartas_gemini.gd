@@ -8,12 +8,11 @@ const DEFALT_CARD_MOVE_SPEED = 0.1
 var card_being_dragged
 var screen_size
 var is_hovering_on_card
-@onready var player_hand_reference = $"../PlayerHand"
+@onready var player_hand_reference = $Player_Hand
 
 # Pega o tamanho da tela pra empedir que a carta seja arrastada pra fora dela
 func _ready() -> void:
 	screen_size = get_viewport_rect().size
-	$"../InputManager".connect("left_mouse_buttton_released", on_left_click_release)
 
 # Verifica a todo frame se está clicando em alguma carta
 func _process(_delta: float) -> void:

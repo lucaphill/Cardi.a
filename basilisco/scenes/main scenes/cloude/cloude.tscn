@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://d337sfjrexjkw"]
+
+[ext_resource type="Script" uid="uid://bh00jcwcm54xb" path="res://scripts/cloude.gd" id="1_lwafn"]
+
+[node name="Cloude" type="Node2D" unique_id=1913107958]
+script = ExtResource("1_lwafn")
+
+[node name="Control" type="Control" parent="." unique_id=989442881]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="voltar" type="Button" parent="Control" unique_id=2100503621]
+layout_mode = 0
+offset_left = 1146.0
+offset_top = 648.0
+offset_right = 1229.0
+offset_bottom = 682.0
+text = "voltar"
+
+[connection signal="pressed" from="Control/voltar" to="." method="_on_voltar_pressed"]

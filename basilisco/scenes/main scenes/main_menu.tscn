@@ -1,40 +1,128 @@
 [gd_scene format=3 uid="uid://dbfa4mxkvdbs6"]
 
 [ext_resource type="Script" uid="uid://ccab81eyhxo7n" path="res://scripts/main_menu.gd" id="1_hwpy7"]
+[ext_resource type="PackedScene" uid="uid://b05j34cynjhjg" path="res://scenes/fade_in.tscn" id="2_3gmrm"]
+[ext_resource type="Texture2D" uid="uid://degitd5fdt1m3" path="res://assents/sprites/basilisco.png" id="2_h4jmp"]
+[ext_resource type="Texture2D" uid="uid://b6nslpnb017va" path="res://assents/sprites/main_menu.png" id="2_hwpy7"]
+[ext_resource type="PackedScene" uid="uid://gpmt15d7adk8" path="res://scenes/fade_out.tscn" id="2_lypit"]
+[ext_resource type="Texture2D" uid="uid://cf1idy4dc3c7c" path="res://assents/sprites/start button/start_1.jpeg" id="2_nwcwe"]
+[ext_resource type="Texture2D" uid="uid://gf6kft31mbqa" path="res://assents/sprites/quit button/quit_1.jpeg" id="2_o5neu"]
+[ext_resource type="Texture2D" uid="uid://brlq2ve5cnnpu" path="res://assents/sprites/start button/start_2.jpeg" id="3_fy6qv"]
+[ext_resource type="Texture2D" uid="uid://cxaycwpa8ra4d" path="res://assents/sprites/quit button/quit_2.jpeg" id="3_p432l"]
+[ext_resource type="Shader" uid="uid://rqk7bk6nlnb1" path="res://shaders/vhs_shader.gdshader" id="4_3gmrm"]
+[ext_resource type="Texture2D" uid="uid://cpnrg5t87hdd3" path="res://assents/sprites/start button/start_3.jpeg" id="4_h4jmp"]
+[ext_resource type="Texture2D" uid="uid://gq5ncggfymbp" path="res://assents/sprites/quit button/quitt_3.jpeg" id="7_nwcwe"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_hwpy7"]
+load_path = "res://.godot/imported/win98-wallpaper.webp-cbc4f6ed58b1ac1ef484d20576ce71bb.ctex"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_lypit"]
+shader = ExtResource("4_3gmrm")
+shader_parameter/brightness = 1.290000061275
+shader_parameter/contrast = 1.2990000617025
+shader_parameter/saturation = 1.1
+shader_parameter/gamma = 1.16100004862773
+shader_parameter/curvature = 0.07200000342
+shader_parameter/corner_soften = 0.06
+shader_parameter/vignette = 0.226000010735
+shader_parameter/scanline_strength = 0.6610000313975
+shader_parameter/scanline_density = 1.15
+shader_parameter/interlace_strength = 0.7310000347225
+shader_parameter/mask_strength = 0.9430000447925
+shader_parameter/mask_scale = 0.5
+shader_parameter/chroma_offset_px = 1.6
+shader_parameter/luma_smear_px = 2.2
+shader_parameter/jitter_px = 0.642000030495
+shader_parameter/wobble_px = 1.89600009006
+shader_parameter/tape_noise = 0.22
+shader_parameter/tape_lines = 0.230000010925
+shader_parameter/roll_speed = 0.15200000722
+shader_parameter/roll_strength = 0.0730000034675
+shader_parameter/glow_strength = 0.25
+shader_parameter/glow_threshold = 0.65
 
 [node name="main_menu" type="Node2D" unique_id=1228729446]
 script = ExtResource("1_hwpy7")
 
+[node name="Transcicoes" type="CanvasLayer" parent="." unique_id=139642995]
+
+[node name="Fade_out" parent="Transcicoes" unique_id=971055919 instance=ExtResource("2_lypit")]
+
+[node name="Fade_out_Timer" type="Timer" parent="Transcicoes/Fade_out" unique_id=1826170152]
+
+[node name="Fade_in" parent="Transcicoes" unique_id=2070389534 instance=ExtResource("2_3gmrm")]
+visible = false
+
+[node name="Fade_in_Timer" type="Timer" parent="Transcicoes/Fade_in" unique_id=222099887]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1134333197]
+layer = -26
+
+[node name="nome" type="Sprite2D" parent="CanvasLayer" unique_id=2071841878]
+z_index = 47
+position = Vector2(640, 161.25)
+scale = Vector2(1.0661451, 1.1593406)
+texture = ExtResource("2_h4jmp")
+
+[node name="background" type="Sprite2D" parent="CanvasLayer" unique_id=792777873]
+visible = false
+z_index = 430
+position = Vector2(640, 360)
+texture = ExtResource("2_hwpy7")
+
+[node name="background2" type="Sprite2D" parent="CanvasLayer" unique_id=1299185231]
+position = Vector2(640.49994, 363.31253)
+scale = Vector2(1.4300001, 1.2919626)
+texture = SubResource("CompressedTexture2D_hwpy7")
+
+[node name="ctr" type="ColorRect" parent="CanvasLayer" unique_id=991529631]
+z_index = 49
+material = SubResource("ShaderMaterial_lypit")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
 [node name="botton_mannager" type="Control" parent="." unique_id=128460098]
+visible = false
+z_index = 45
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="start" type="Button" parent="botton_mannager" unique_id=644735926]
+[node name="start" type="TextureButton" parent="botton_mannager" unique_id=1949519504]
 layout_mode = 0
-offset_left = 498.0
-offset_top = 324.0
+offset_left = 540.0
+offset_top = 475.28
 offset_right = 740.0
-offset_bottom = 399.0
-text = "start"
+offset_bottom = 535.2816
+texture_normal = ExtResource("2_nwcwe")
+texture_pressed = ExtResource("3_fy6qv")
+texture_hover = ExtResource("4_h4jmp")
 
 [node name="options" type="Button" parent="botton_mannager" unique_id=36381430]
+visible = false
 layout_mode = 0
-offset_left = 492.0
-offset_top = 434.0
-offset_right = 735.0
-offset_bottom = 512.0
+offset_left = 501.0
+offset_top = 454.0
+offset_right = 744.0
+offset_bottom = 532.0
 text = "options"
 
-[node name="quit" type="Button" parent="botton_mannager" unique_id=248780505]
+[node name="quit" type="TextureButton" parent="botton_mannager" unique_id=260694449]
 layout_mode = 0
-offset_left = 497.0
-offset_top = 545.0
-offset_right = 735.0
-offset_bottom = 632.0
-text = "quit"
+offset_left = 540.0
+offset_top = 592.0
+offset_right = 740.0
+offset_bottom = 652.0
+texture_normal = ExtResource("2_o5neu")
+texture_pressed = ExtResource("3_p432l")
+texture_hover = ExtResource("7_nwcwe")
 
+[connection signal="timeout" from="Transcicoes/Fade_out/Fade_out_Timer" to="." method="_on_fade_out_timer_timeout"]
+[connection signal="timeout" from="Transcicoes/Fade_in/Fade_in_Timer" to="." method="_on_fade_in_timer_timeout"]
 [connection signal="pressed" from="botton_mannager/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="botton_mannager/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="botton_mannager/quit" to="." method="_on_quit_pressed"]

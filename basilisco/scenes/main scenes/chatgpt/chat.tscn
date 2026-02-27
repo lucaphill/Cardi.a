@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bfsca1mriboi3"]
+
+[ext_resource type="Script" uid="uid://0aufis2aj0nl" path="res://scripts/chat.gd" id="1_42fmu"]
+
+[node name="Chat" type="Node2D" unique_id=605241873]
+script = ExtResource("1_42fmu")
+
+[node name="Control" type="Control" parent="." unique_id=219834149]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Voltar" type="Button" parent="Control" unique_id=396378183]
+layout_mode = 0
+offset_left = 1040.0
+offset_top = 623.0
+offset_right = 1169.0
+offset_bottom = 660.0
+text = "voltar"
+
+[connection signal="pressed" from="Control/Voltar" to="." method="_on_voltar_pressed"]
