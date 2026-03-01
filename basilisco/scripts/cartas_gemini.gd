@@ -41,6 +41,7 @@ func finish_drag():
 		else:
 			player_hand_reference.add_card_to_hand(card_being_dragged, DEFALT_CARD_MOVE_SPEED)
 		card_being_dragged = null
+	
 
 # conecta o sinal das cartas ao manager
 func connect_card_signals(card):

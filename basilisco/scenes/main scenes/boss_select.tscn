@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://4y8otdogw7ia" path="res://scripts/boss_select.gd" id="1_i14ug"]
 [ext_resource type="PackedScene" uid="uid://b05j34cynjhjg" path="res://scenes/fade_in.tscn" id="2_1o3hn"]
 [ext_resource type="PackedScene" uid="uid://gpmt15d7adk8" path="res://scenes/fade_out.tscn" id="3_b63hh"]
-[ext_resource type="Texture2D" uid="uid://d300ra4e61mpc" path="res://assents/sprites/icon.svg" id="5_b63hh"]
+[ext_resource type="Texture2D" uid="uid://d300ra4e61mpc" path="res://assents/icon.svg" id="5_b63hh"]
 [ext_resource type="Texture2D" uid="uid://bpjqcipq4u2fs" path="res://assents/gemini_mini.png" id="6_i16bf"]
 [ext_resource type="Texture2D" uid="uid://ckkrrsx1ijioq" path="res://assents/cloude_mini.png" id="7_6t6vp"]
 
@@ -103,9 +103,9 @@ border_color = Color(0, 0, 0, 1)
 script = ExtResource("1_i14ug")
 
 [node name="Trascicoes" type="CanvasLayer" parent="." unique_id=2127032376]
-visible = false
 
 [node name="Fade_in" parent="Trascicoes" unique_id=2070389534 instance=ExtResource("2_1o3hn")]
+visible = false
 
 [node name="Fade_in_Timer" type="Timer" parent="Trascicoes/Fade_in" unique_id=1634209555]
 

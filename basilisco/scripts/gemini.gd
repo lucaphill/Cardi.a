@@ -1,10 +1,7 @@
 extends Node2D
 
 @onready var calculo = $Calculo
-@onready var cartas = $Cartas_Gemini
 var teste_texto = "teste"
-
-var card_resource = {}
 
 func _ready() -> void:
 	pass

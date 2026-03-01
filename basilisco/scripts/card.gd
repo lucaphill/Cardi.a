@@ -9,7 +9,8 @@ var option_index : int
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Conecta a carta com o manager (TODAS AS CARTAS TEM QUE SER FILHAS DO MANAGER)
-	pass
+	get_parent().connect_card_signals(self)
+
 
 func _on_area_2d_mouse_entered() -> void:
 	emit_signal("hovered", self)
