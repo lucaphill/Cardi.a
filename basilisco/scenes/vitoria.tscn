@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dp1r6a1fq0xen"]
+
+[ext_resource type="Script" uid="uid://doppxs4anfbrv" path="res://scripts/vitoria.gd" id="1_3oowa"]
+[ext_resource type="FontFile" uid="uid://dw6wfk8i82tbv" path="res://fonts/VCR_OSD_MONO_1.001.ttf" id="2_7a54b"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nnk0s"]
+font = ExtResource("2_7a54b")
+font_size = 66
+
+[node name="Vitoria" type="Node2D" unique_id=1827862133]
+script = ExtResource("1_3oowa")
+
+[node name="Control" type="Control" parent="." unique_id=123267149]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control" unique_id=769018342]
+layout_mode = 0
+offset_left = 475.0
+offset_top = 190.0
+offset_right = 784.0
+offset_bottom = 249.0
+text = "Vitoria!"
+label_settings = SubResource("LabelSettings_nnk0s")
+
+[node name="Button" type="Button" parent="Control" unique_id=1346967092]
+layout_mode = 0
+offset_left = 549.0
+offset_top = 451.0
+offset_right = 693.0
+offset_bottom = 517.0
+text = "voltar"
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

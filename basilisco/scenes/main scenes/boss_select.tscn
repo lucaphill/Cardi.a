@@ -4,9 +4,95 @@
 [ext_resource type="Script" uid="uid://4y8otdogw7ia" path="res://scripts/boss_select.gd" id="1_i14ug"]
 [ext_resource type="PackedScene" uid="uid://b05j34cynjhjg" path="res://scenes/fade_in.tscn" id="2_1o3hn"]
 [ext_resource type="PackedScene" uid="uid://gpmt15d7adk8" path="res://scenes/fade_out.tscn" id="3_b63hh"]
+[ext_resource type="Texture2D" uid="uid://d300ra4e61mpc" path="res://assents/sprites/icon.svg" id="5_b63hh"]
+[ext_resource type="Texture2D" uid="uid://bpjqcipq4u2fs" path="res://assents/gemini_mini.png" id="6_i16bf"]
+[ext_resource type="Texture2D" uid="uid://ckkrrsx1ijioq" path="res://assents/cloude_mini.png" id="7_6t6vp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1o3hn"]
 bg_color = Color(0, 0.50050473, 0.3637334, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b63hh"]
+bg_color = Color(0.17171428, 0.37495762, 0.14738843, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i16bf"]
+bg_color = Color(0, 0.5019608, 0.3647059, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6t6vp"]
+bg_color = Color(3.5616756e-06, 0.57400453, 0.8672571, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_54dn7"]
+bg_color = Color(7.70092e-07, 0.63536036, 0.957218, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_detail = 2
+expand_margin_left = 10.0
+expand_margin_top = 10.0
+expand_margin_right = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sr87a"]
+bg_color = Color(7.70092e-07, 0.63536036, 0.957218, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_76bxb"]
+bg_color = Color(0.966355, 0.90207726, 0.8660408, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w8s26"]
+bg_color = Color(0.9647059, 0.9019608, 0.8666667, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2tn4i"]
+bg_color = Color(0.9647059, 0.9019608, 0.8666667, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
@@ -17,6 +103,7 @@ border_color = Color(0, 0, 0, 1)
 script = ExtResource("1_i14ug")
 
 [node name="Trascicoes" type="CanvasLayer" parent="." unique_id=2127032376]
+visible = false
 
 [node name="Fade_in" parent="Trascicoes" unique_id=2070389534 instance=ExtResource("2_1o3hn")]
 
@@ -34,30 +121,73 @@ offset_bottom = 40.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="button_manager" unique_id=1091339335]
 layout_mode = 0
-offset_left = 325.0
+offset_left = 190.0
 offset_top = 135.0
-offset_right = 955.0
+offset_right = 1090.0
 offset_bottom = 462.0
-theme_override_constants/separation = 11
+theme_override_constants/separation = 69
 alignment = 1
 
 [node name="Button_chat" type="Button" parent="button_manager/HBoxContainer" unique_id=1572027551]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 11
-theme_override_font_sizes/font_size = 24
+theme_override_fonts/font = ExtResource("1_2nrry")
+theme_override_font_sizes/font_size = 49
+theme_override_icons/icon = ExtResource("5_b63hh")
 theme_override_styles/normal = SubResource("StyleBoxFlat_1o3hn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b63hh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_i16bf")
 text = "ChatGPT"
+icon_alignment = 1
+expand_icon = true
 
 [node name="Button_gemini" type="Button" parent="button_manager/HBoxContainer" unique_id=1515140605]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 0.8745098, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/font_hover_color = Color(0.9490196, 0.9490196, 0.9490196, 0)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 16
+theme_override_constants/icon_max_width = 230
+theme_override_fonts/font = ExtResource("1_2nrry")
+theme_override_font_sizes/font_size = 48
+theme_override_icons/icon = ExtResource("6_i16bf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6t6vp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_54dn7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_sr87a")
+keep_pressed_outside = true
 text = "Gemini"
+icon_alignment = 1
 
 [node name="Button_cloud" type="Button" parent="button_manager/HBoxContainer" unique_id=1503728655]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.847612, 0.41144598, 3.85046e-07, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 0)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_constants/icon_max_width = 230
+theme_override_fonts/font = ExtResource("1_2nrry")
+theme_override_font_sizes/font_size = 48
+theme_override_icons/icon = ExtResource("7_6t6vp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_76bxb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_w8s26")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2tn4i")
 text = "Cloude"
+icon_alignment = 1
+expand_icon = true
 
 [node name="back" type="Button" parent="button_manager" unique_id=351973294]
 layout_mode = 0

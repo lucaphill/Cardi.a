@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dwmhl31g11be3"]
+
+[ext_resource type="Script" uid="uid://cgdexp7qbq6yj" path="res://scenes/main scenes/gemini/scripts_gemini/carta.gd" id="1_u43e8"]
+[ext_resource type="Texture2D" uid="uid://soxptom1d8qu" path="res://scenes/main scenes/gemini/sprites_cartas/0.png" id="2_btqmq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q2wms"]
+size = Vector2(179, 263)
+
+[node name="Carta" type="CharacterBody2D" unique_id=550883865]
+script = ExtResource("1_u43e8")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1266092713]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=741822591]
+position = Vector2(0.5, -0.5)
+shape = SubResource("RectangleShape2D_q2wms")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1989317197]
+texture = ExtResource("2_btqmq")
+
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

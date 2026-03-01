@@ -8,8 +8,7 @@ var hand_position
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Conecta a carta com o manager (TODAS AS CARTAS TEM QUE SER FILHAS DO MANAGER)
-	get_parent().connect_card_signals(self)
-
+	pass
 
 func _on_area_2d_mouse_entered() -> void:
 	emit_signal("hovered", self)

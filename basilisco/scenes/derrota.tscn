@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dmca3djxksnf8"]
+
+[ext_resource type="Script" uid="uid://dv750kimovfvk" path="res://scripts/derrota.gd" id="1_78d6e"]
+[ext_resource type="FontFile" uid="uid://dw6wfk8i82tbv" path="res://fonts/VCR_OSD_MONO_1.001.ttf" id="1_101bo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_78d6e"]
+font = ExtResource("1_101bo")
+font_size = 78
+
+[node name="derrota" type="Node2D" unique_id=450193340]
+script = ExtResource("1_78d6e")
+
+[node name="Control" type="Control" parent="." unique_id=1118604344]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control" unique_id=585294894]
+layout_mode = 0
+offset_left = 570.0
+offset_top = 374.0
+offset_right = 674.0
+offset_bottom = 426.0
+text = "voltar"
+
+[node name="Label" type="Label" parent="Control" unique_id=699035453]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 136.0
+offset_right = 800.0
+offset_bottom = 205.0
+text = "Derrota"
+label_settings = SubResource("LabelSettings_78d6e")
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
