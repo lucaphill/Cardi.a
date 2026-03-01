@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://d2ljgebdk6xsk"]
+
+[ext_resource type="Texture2D" uid="uid://dki4a65mjciqv" path="res://assents/sprites/Fundo_chat.png" id="1_6l0bf"]
+[ext_resource type="Script" uid="uid://cu4aeevw6jjmg" path="res://scripts/chat_interface.gd" id="1_ov083"]
+[ext_resource type="FontFile" uid="uid://dw6wfk8i82tbv" path="res://fonts/VCR_OSD_MONO_1.001.ttf" id="2_hm057"]
+
+[node name="Chat_interface" type="Control" unique_id=2012376245]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ov083")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1911618014]
+layer = -1
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1460526115]
+position = Vector2(640, 360)
+texture = ExtResource("1_6l0bf")
+
+[node name="Pergunta" type="RichTextLabel" parent="." unique_id=1700238867]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 522.0
+offset_top = 47.0
+offset_right = 1054.0
+offset_bottom = 256.0
+theme_override_colors/default_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_fonts/normal_font = ExtResource("2_hm057")
+theme_override_fonts/bold_font = ExtResource("2_hm057")
+theme_override_fonts/bold_italics_font = ExtResource("2_hm057")
+theme_override_fonts/italics_font = ExtResource("2_hm057")
+theme_override_fonts/mono_font = ExtResource("2_hm057")
+theme_override_font_sizes/normal_font_size = 22
+theme_override_font_sizes/bold_font_size = 22
+theme_override_font_sizes/bold_italics_font_size = 22
+theme_override_font_sizes/italics_font_size = 22
+theme_override_font_sizes/mono_font_size = 21
+text = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus."
+fit_content = true
+scroll_active = false
+horizontal_alignment = 1
+
+[node name="Resposta_A" type="RichTextLabel" parent="." unique_id=2040698887]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 313.0
+offset_right = 643.0
+offset_bottom = 418.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_hm057")
+theme_override_fonts/bold_font = ExtResource("2_hm057")
+theme_override_fonts/bold_italics_font = ExtResource("2_hm057")
+theme_override_fonts/italics_font = ExtResource("2_hm057")
+theme_override_font_sizes/normal_font_size = 19
+theme_override_font_sizes/bold_font_size = 19
+theme_override_font_sizes/bold_italics_font_size = 19
+theme_override_font_sizes/italics_font_size = 19
+theme_override_font_sizes/mono_font_size = 19
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Resposta_B" type="RichTextLabel" parent="." unique_id=651956621]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 449.0
+offset_right = 643.0
+offset_bottom = 544.0
+theme_override_colors/default_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_fonts/normal_font = ExtResource("2_hm057")
+theme_override_fonts/bold_font = ExtResource("2_hm057")
+theme_override_fonts/bold_italics_font = ExtResource("2_hm057")
+theme_override_fonts/italics_font = ExtResource("2_hm057")
+theme_override_font_sizes/normal_font_size = 19
+theme_override_font_sizes/bold_font_size = 19
+theme_override_font_sizes/bold_italics_font_size = 19
+theme_override_font_sizes/italics_font_size = 19
+theme_override_font_sizes/mono_font_size = 19
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Resposta_C" type="RichTextLabel" parent="." unique_id=255853171]
+layout_mode = 0
+offset_left = 934.0
+offset_top = 310.0
+offset_right = 1178.0
+offset_bottom = 417.0
+theme_override_colors/default_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_fonts/normal_font = ExtResource("2_hm057")
+theme_override_fonts/bold_font = ExtResource("2_hm057")
+theme_override_fonts/bold_italics_font = ExtResource("2_hm057")
+theme_override_fonts/italics_font = ExtResource("2_hm057")
+theme_override_font_sizes/normal_font_size = 19
+theme_override_font_sizes/bold_font_size = 19
+theme_override_font_sizes/bold_italics_font_size = 19
+theme_override_font_sizes/italics_font_size = 19
+theme_override_font_sizes/mono_font_size = 19
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Resposta_D" type="RichTextLabel" parent="." unique_id=332894395]
+layout_mode = 0
+offset_left = 934.0
+offset_top = 446.0
+offset_right = 1177.0
+offset_bottom = 546.0
+theme_override_colors/default_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_fonts/normal_font = ExtResource("2_hm057")
+theme_override_fonts/bold_font = ExtResource("2_hm057")
+theme_override_fonts/bold_italics_font = ExtResource("2_hm057")
+theme_override_fonts/italics_font = ExtResource("2_hm057")
+theme_override_font_sizes/normal_font_size = 19
+theme_override_font_sizes/bold_font_size = 19
+theme_override_font_sizes/bold_italics_font_size = 19
+theme_override_font_sizes/italics_font_size = 19
+theme_override_font_sizes/mono_font_size = 19
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1

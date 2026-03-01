@@ -2,11 +2,13 @@
 
 [ext_resource type="Script" uid="uid://0aufis2aj0nl" path="res://scripts/chat.gd" id="1_42fmu"]
 [ext_resource type="PackedScene" uid="uid://couxuy5er2lmj" path="res://scenes/main scenes/chatgpt/main_GPT.tscn" id="2_3nb76"]
-[ext_resource type="FontFile" uid="uid://dw6wfk8i82tbv" path="res://fonts/VCR_OSD_MONO_1.001.ttf" id="3_uspdl"]
+[ext_resource type="PackedScene" uid="uid://d2ljgebdk6xsk" path="res://scenes/main scenes/chatgpt/chat_interface.tscn" id="2_oucoa"]
 [ext_resource type="PackedScene" uid="uid://3kjpwt6khs0" path="res://scenes/cardSlot.tscn" id="4_wm8lt"]
 
 [node name="Chat" type="Node2D" unique_id=605241873]
 script = ExtResource("1_42fmu")
+
+[node name="Chat_interface" parent="." unique_id=2012376245 instance=ExtResource("2_oucoa")]
 
 [node name="Control" type="Control" parent="." unique_id=219834149]
 layout_mode = 3
@@ -22,28 +24,9 @@ offset_right = 1262.0
 offset_bottom = 698.0
 text = "voltar"
 
-[node name="MainGPT" parent="." unique_id=2050167096 instance=ExtResource("2_3nb76")]
-
-[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=166409452]
-offset_left = 522.0
-offset_top = 43.0
-offset_right = 1015.0
-offset_bottom = 287.0
-theme_override_fonts/normal_font = ExtResource("3_uspdl")
-theme_override_fonts/bold_font = ExtResource("3_uspdl")
-theme_override_fonts/bold_italics_font = ExtResource("3_uspdl")
-theme_override_fonts/italics_font = ExtResource("3_uspdl")
-theme_override_fonts/mono_font = ExtResource("3_uspdl")
-theme_override_font_sizes/normal_font_size = 19
-theme_override_font_sizes/bold_font_size = 19
-theme_override_font_sizes/bold_italics_font_size = 19
-theme_override_font_sizes/italics_font_size = 19
-theme_override_font_sizes/mono_font_size = 18
-text = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus."
-scroll_active = false
-horizontal_alignment = 1
-
 [node name="CardSlot" parent="." unique_id=1090387939 instance=ExtResource("4_wm8lt")]
-position = Vector2(774, 304)
+position = Vector2(785, 435)
+
+[node name="MainGPT" parent="." unique_id=2050167096 instance=ExtResource("2_3nb76")]
 
 [connection signal="pressed" from="Control/Voltar" to="." method="_on_voltar_pressed"]

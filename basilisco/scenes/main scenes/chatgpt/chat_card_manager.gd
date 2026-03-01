@@ -4,11 +4,15 @@ const COLLISION_MASK_CARD = 1
 const COLLISION_MASK_CARD_SLOT = 2
 const DEFALT_CARD_MOVE_SPEED = 0.1
 
+signal card_played(option_index)
+
 # definindo variaveis
 var card_being_dragged
 var screen_size
 var is_hovering_on_card
 @onready var player_hand_reference = $"../Chat_PlayerHand"
+@onready var cardSlot_reference = $"../../CardSlot"
+
 
 # Pega o tamanho da tela pra empedir que a carta seja arrastada pra fora dela
 func _ready() -> void:
@@ -39,10 +43,14 @@ func finish_drag():
 			card_being_dragged.position = card_slot_found.position
 			card_being_dragged.get_node("Area2D/CollisionShape2D").disabled = true
 			card_slot_found.card_in_slot = true
+			card_slot_found.current_card = card_being_dragged
+			# Avisar o sistema de quiz
+			emit_signal("card_played", card_being_dragged.option_index)
 		else:
 			player_hand_reference.add_card_to_hand(card_being_dragged, DEFALT_CARD_MOVE_SPEED)
 		card_being_dragged = null
-	
+
+
 
 # conecta o sinal das cartas ao manager
 func connect_card_signals(card):

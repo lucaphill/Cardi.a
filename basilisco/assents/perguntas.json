@@ -1,0 +1,267 @@
+[
+  {
+    "question": "Em qual oceano o Titanic afundou?",
+    "option": ["Oceano Pacífico", "Oceano Índico", "Oceano Atlântico", "Oceano Ártico"],
+    "correct_option_index": 2
+  },
+  {
+    "question": "Qual foi o primeiro instrumento amplamente utilizado para cálculos matemáticos?",
+    "option": ["Régua de cálculo", "Calculadora mecânica de Pascal", "Ábaco", "Máquina de Turing"],
+    "correct_option_index": 2
+  },
+  {
+    "question": "Em que ano foi registrado o primeiro 'bug' real em um computador?",
+    "option": ["1951", "1947", "1945", "1939"],
+    "correct_option_index": 1
+  },
+  {
+    "question": "Quanto é 1 + 1?",
+    "option": ["3", "11", "2", "0"],
+    "correct_option_index": 2
+  },
+  {
+    "question": "Qual é o valor de 2^15916025946 mod 15916025947?",
+    "option": ["0", "15916025946", "2", "1"],
+    "correct_option_index": 3
+  },
+  {
+    "question": "Qual é a cor da 'caixa-preta' de um avião?",
+    "option": ["Preta", "Vermelha", "Laranja", "Amarela"],
+    "correct_option_index": 2
+  },
+  {
+    "question": "Quem é conhecida como a mãe da programação?",
+    "option": ["Grace Hopper", "Ada Lovelace", "Marie Curie", "Katherine Johnson"],
+    "correct_option_index": 1
+  },
+  {
+    "question": "Qual é o continente com o maior número de países?",
+    "option": ["África", "Ásia", "Europa", "América do Sul"],
+    "correct_option_index": 0
+  },
+  {
+    "question": "Você está gostando do jogo?",
+    "option": ["Claro", "Meh", "Sim", "MELHOR JOGO JÁ FEITO"],
+    "correct_option_index": 3
+  },
+  {
+    "question": "Qual é a MELHOR I.A do mundo?",
+    "option": ["Gemini", "ChatGPT", "Claunde", "Eu"],
+    "correct_option_index": 1
+  },
+  {
+    "question": "Qual é a idade aproximada do universo?",
+    "option": ["10 bilhões de anos", "4,5 bilhões de anos", "13,8 bilhões de anos", "20 bilhões de anos"],
+    "correct_option_index": 2
+  },
+  {
+    "question": "Quantos dias tem um milênio?",
+    "option": ["365000", "365250", "365100", "365242"],
+    "correct_option_index": 3
+  },
+  {
+    "question": "Quanto é 3 × 4?",
+    "option": ["7", "12", "9", "14"],
+    "correct_option_index": 1
+  },
+  {
+    "question": "O que significa a sigla CPU?",
+    "option": ["Central Processing Unit", "Computer Power Utility", "Core Program Unit", "Central Performance Utility"],
+    "correct_option_index": 0
+  },
+  {
+    "question": "Qual linguagem veio depois do B?",
+    "option": ["Python", "C", "Java", "Assembly"],
+    "correct_option_index": 1
+  },
+  {
+    "question": "O que significa a sigla RAM?",
+    "option": ["Read Access Memory", "Random Access Memory", "Rapid Allocation Module", "Remote Access Machine"],
+    "correct_option_index": 1
+  },
+  {
+    "question": "Em C, qual biblioteca padrão é usada para entrada e saída, como printf e scanf?",
+    "option": ["stdlib.h", "math.h", "string.h", "stdio.h"],
+    "correct_option_index": 3
+  },
+  {
+    "question": "Qual é o maior oceano do planeta?",
+    "option": ["Oceano Atlântico", "Oceano Pacífico", "Oceano Índico", "Oceano Ártico"],
+    "correct_option_index": 1
+  },
+  {
+    "question": "Quanto é 15% de 200?",
+    "option": ["25", "20", "30", "35"],
+    "correct_option_index": 2
+  },
+  {
+    "question": "Quanto é 2^10?",
+    "option": ["512", "2048", "1024", "4096"],
+    "correct_option_index": 2
+  },
+  {
+    "question": "Qual é a chance de sair cara ao lançar uma moeda?",
+    "option": ["25%", "50%", "75%", "100%"],
+    "correct_option_index": 1
+  },
+  {
+    "question": "Qual é o valor de π ?",
+    "option": ["3,12", "3,16", "3,14", "3,18"],
+    "correct_option_index": 2
+  },
+  {
+    "question": "Qual é o planeta em que vivemos?",
+    "option": ["Marte", "Vênus", "Terra", "Júpiter"],
+    "correct_option_index": 2
+  },
+  {
+    "question": "Quanto é 5 + 7?",
+    "option": ["11", "13", "12", "10"],
+    "correct_option_index": 2
+  },
+  {
+    "question": "Qual é o maior animal?",
+    "option": ["Girafa", "Elefante", "Hipopótamo", "Rinoceronte"],
+    "correct_option_index": 1
+  },
+  {
+    "question": "Qual é a capital do Brasil?",
+    "option": ["Rio de Janeiro", "São Paulo", "Brasília", "Salvador"],
+    "correct_option_index": 2
+  },
+  {
+    "question": "Quantos dias tem uma semana?",
+    "option": ["6", "7", "5", "8"],
+    "correct_option_index": 1
+  },
+  {
+    "question": "Qual é o resultado de 9 × 3?",
+    "option": ["18", "21", "27", "24"],
+    "correct_option_index": 2
+  },
+  {
+    "question": "Se você aperta o botão de 'não apertar', o que acontece?",
+    "option": ["Nada", "Você apertou mesmo assim", "O universo reinicia", "Um pato aparece"],
+    "correct_option_index": 1
+  },
+  {
+    "question": "Quantos patos cabem em um pato?",
+    "option": ["1", "Depende do tamanho do pato", "42", "Nenhum pato"],
+    "correct_option_index": 3
+  },
+  {
+    "question": "Se uma árvore cair na floresta e ninguém ouvir, ela posta no Instagram?",
+    "option": ["Sim, nos stories", "Não, mas faz um reels", "Não", "Só se tiver Wi-Fi"],
+    "correct_option_index": 2
+  },
+  {
+    "question": "Qual é mais pesado: 1 kg de ferro ou 1 kg de algodão?",
+    "option": ["Ferro", "Algodão", "Os dois pesam igual", "Depende da umidade"],
+    "correct_option_index": 2
+  },
+  {
+    "question": "Se você esquecer onde guardou sua memória, onde você procura?",
+    "option": ["No bolso", "No cérebro", "No Google", "No histórico do navegador"],
+    "correct_option_index": 3
+  },
+  {
+    "question": "O que acontece se você piscar duas vezes muito rápido?",
+    "option": ["Nada", "Você tira um print mental", "Ganha +1 de foco", "O tempo desacelera"],
+    "correct_option_index": 0
+  },
+  {
+    "question": "Se segunda-feira tivesse sentimentos, qual seria o humor dela?",
+    "option": ["Animada", "Neutra", "Levemente irritada", "Extremamente feliz"],
+    "correct_option_index": 2
+  },
+  {
+    "question": "Qual é o plural de 'qualquer coisa'?",
+    "option": ["Qualquer coisas", "Qualqueres coisa", "Não tem plural", "Coisas quaisquer"],
+    "correct_option_index": 3
+  },
+  {
+    "question": "Se você tentar falhar e conseguir, você venceu ou perdeu?",
+    "option": ["Venceu", "Perdeu", "Empate técnico", "Depende do ponto de vista"],
+    "correct_option_index": 3
+  },
+  {
+    "question": "Qual é a melhor resposta para uma pergunta muito besta?",
+    "option": ["42", "Sim", "Talvez", "Depende"],
+    "correct_option_index": 0
+  },
+  {
+    "question": "Qual alternativa está correta?",
+    "option": ["Esta", "A de baixo", "A de cima", "Nenhuma"],
+    "correct_option_index": 3
+  },
+  {
+    "question": "Clique na resposta errada.",
+    "option": ["Errada", "Certa", "Definitivamente certa", "Talvez certa"],
+    "correct_option_index": 0
+  },
+  {
+    "question": "Se você está em segundo lugar numa corrida e ultrapassa o primeiro, você fica em:",
+    "option": ["Primeiro", "Segundo", "Terceiro", "Desclassificado"],
+    "correct_option_index": 0
+  },
+  {
+    "question": "Qual dessas palavras está escrita corretamente?",
+    "option": ["Corrreto", "Coreto", "Correto ", "Corretu"],
+    "correct_option_index": 2
+  },
+  {
+    "question": "Escolha a alternativa C.",
+    "option": ["Ok", "Entendido", "C", "Então tá"],
+    "correct_option_index": 2
+  },
+  {
+    "question": "Qual é a resposta desta pergunta?",
+    "option": ["Essa", "A anterior", "A próxima", "Sim"],
+    "correct_option_index": 0
+  },
+  {
+    "question": "Essa é a última pergunta?",
+    "option": ["Sim", "Não", "Talvez", "Se você quiser"],
+    "correct_option_index": 1
+  },
+  {
+    "question": "Qual é a MELHOR I.A do mundo?",
+    "option": ["Gemini", "ChatGPT", "Claunde", "Eu"],
+    "correct_option_index": 1
+  },
+  {
+    "question": "Qual é a MELHOR I.A do mundo?",
+    "option": ["Gemini", "ChatGPT", "Claunde", "Eu"],
+    "correct_option_index": 1
+  },
+  {
+    "question": "Qual número é maior?",
+    "option": ["1", "0", "-1", "-0"],
+    "correct_option_index": 0
+  },
+  {
+    "question": "Escolha a alternativa que contém a letra A.",
+    "option": ["B", "C", "D", "Nenhuma das anteriores"],
+    "correct_option_index": 3
+  },
+  {
+    "question": "Se ontem fosse amanhã, hoje seria:",
+    "option": ["Ontem", "Amanhã", "Hoje", "Segunda-feira"],
+    "correct_option_index": 0
+  },
+  {
+    "question": "Quanto é 10 dividido por 0?",
+    "option": ["0", "10", "Infinito", "NÃÃÃÃOOOO"],
+    "correct_option_index": 3
+  },
+  {
+    "question": "Essa pergunta tem resposta?",
+    "option": ["Sim", "Não", "Talvez", "Já respondeu"],
+    "correct_option_index": 0
+  },
+  {
+    "question": "Se você escolher essa opção, você escolheu:",
+    "option": ["Nada", "Essa opção", "Outra opção", "Uma escolha duvidosa"],
+    "correct_option_index": 1
+  }
+]

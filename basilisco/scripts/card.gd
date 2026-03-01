@@ -4,6 +4,7 @@ signal hovered
 signal hovered_off
 
 var hand_position
+var option_index : int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
