@@ -55,9 +55,9 @@
     "correct_option_index": 2
   },
   {
-    "question": "Quantos dias tem um milênio?",
+    "question": "Quantos dias tem um milênio sem bissextos?",
     "option": ["365000", "365250", "365100", "365242"],
-    "correct_option_index": 3
+    "correct_option_index": 0
   },
   {
     "question": "Quanto é 3 × 4?",
@@ -105,13 +105,8 @@
     "correct_option_index": 1
   },
   {
-    "question": "Qual é o valor de π ?",
+    "question": "Qual é o valor de π?",
     "option": ["3,12", "3,16", "3,14", "3,18"],
-    "correct_option_index": 2
-  },
-  {
-    "question": "Qual é o planeta em que vivemos?",
-    "option": ["Marte", "Vênus", "Terra", "Júpiter"],
     "correct_option_index": 2
   },
   {
@@ -120,19 +115,9 @@
     "correct_option_index": 2
   },
   {
-    "question": "Qual é o maior animal?",
-    "option": ["Girafa", "Elefante", "Hipopótamo", "Rinoceronte"],
-    "correct_option_index": 1
-  },
-  {
     "question": "Qual é a capital do Brasil?",
     "option": ["Rio de Janeiro", "São Paulo", "Brasília", "Salvador"],
     "correct_option_index": 2
-  },
-  {
-    "question": "Quantos dias tem uma semana?",
-    "option": ["6", "7", "5", "8"],
-    "correct_option_index": 1
   },
   {
     "question": "Qual é o resultado de 9 × 3?",
@@ -170,7 +155,7 @@
     "correct_option_index": 0
   },
   {
-    "question": "Se segunda-feira tivesse sentimentos, qual seria o humor dela?",
+    "question": "Se segunda tivesse sentimentos, qual seria o humor dela?",
     "option": ["Animada", "Neutra", "Levemente irritada", "Extremamente feliz"],
     "correct_option_index": 2
   },
@@ -191,8 +176,8 @@
   },
   {
     "question": "Qual alternativa está correta?",
-    "option": ["Esta", "A de baixo", "A de cima", "Nenhuma"],
-    "correct_option_index": 3
+    "option": [ "A do lado","esta", "A de baixo", "Nenhuma"],
+    "correct_option_index": 1
   },
   {
     "question": "Clique na resposta errada.",
@@ -205,13 +190,13 @@
     "correct_option_index": 0
   },
   {
-    "question": "Qual dessas palavras está escrita corretamente?",
-    "option": ["Corrreto", "Coreto", "Correto ", "Corretu"],
+    "question": "Qual dessas palavras é correta?",
+    "option": ["Corretamente", "Coreto", "Correta ", "Corretu"],
     "correct_option_index": 2
   },
   {
     "question": "Escolha a alternativa C.",
-    "option": ["Ok", "Entendido", "C", "Então tá"],
+    "option": ["C", "Entendido", "Não escolha essa", "Então tá"],
     "correct_option_index": 2
   },
   {
@@ -221,7 +206,7 @@
   },
   {
     "question": "Essa é a última pergunta?",
-    "option": ["Sim", "Não", "Talvez", "Se você quiser"],
+    "option": ["Sim", "Não", "Talvez", "Definitivamente"],
     "correct_option_index": 1
   },
   {
@@ -263,5 +248,75 @@
     "question": "Se você escolher essa opção, você escolheu:",
     "option": ["Nada", "Essa opção", "Outra opção", "Uma escolha duvidosa"],
     "correct_option_index": 1
-  }
+  },  
+{  
+"question": "Qual cientista é considerado o pai da computação teórica?",  
+"option": ["Albert Einstein", "Alan Turing", "Blaise Pascal", "Johannes Kepler"],  
+"correct_option_index": 1  
+},  
+{  
+"question": "Qual é a derivada de sen(x)?",  
+"option": ["cos(x)", "-sen(x)", "-cos(x)", "sen(x)"],  
+"correct_option_index": 0  
+},  
+{  
+"question": "Em C, qual será o valor de x após a execução: int x = 5; x += 3;",  
+"option": ["15", "8", "2", "53"],  
+"correct_option_index": 1  
+},  
+{  
+"question": "Qual foi o primeiro computador eletrônico de grande escala?",  
+"option": ["ENIAC", "IBM PC", "Apple I", "Altair 8800"],  
+"correct_option_index": 0  
+},  
+{  
+"question": "Qual destes é um tipo de aprendizado em inteligência artificial onde o modelo aprende com exemplos rotulados?",  
+"option": ["Aprendizado não supervisionado", "Aprendizado por reforço", "Aprendizado supervisionado", "Aprendizado heurístico"],  
+"correct_option_index": 2  
+},  
+{  
+"question": "Qual é o número atômico do carbono?",  
+"option": ["6", "12", "8", "14"],  
+"correct_option_index": 0  
+},  
+{  
+"question": "Qual é a negação da proposição: 'Todos os gatos são pretos'?",  
+"option": ["Nenhum gato é preto", "Algum gato não é preto", "Todos os gatos não são pretos", "Algum gato é preto"],  
+"correct_option_index": 1  
+},  
+{  
+"question": "Quantos números binários de 3 bits existem?",  
+"option": ["6", "8", "4", "10"],  
+"correct_option_index": 1  
+},  
+{  
+"question": "Qual é a linguagem de programação mais usada para aprendizado de máquina atualmente?",  
+"option": ["C++", "Python", "Java", "Fortran"],  
+"correct_option_index": 1  
+},  
+{  
+"question": "O que significa 'Open Source'?",  
+"option": ["Código aberto disponível para uso e modificação", "Software que funciona apenas online", "Programa que nunca recebe atualização", "Código protegido por patente"],  
+"correct_option_index": 0  
+},
+{  
+"question": "O que acontece se você apertar Alt + F4?",  
+"option": ["Fecha o programa", "Abre um portal interdimensional", "Nada", "Seu PC reinicia sozinho"],  
+"correct_option_index": 0  
+},  
+{  
+"question": "Qual é o tipo mais forte contra Água?",  
+"option": ["Fogo", "Grama", "Elétrico", "Água"],  
+"correct_option_index": 2  
+},
+{  
+"question": "Qual o melhor jogo do mundo?",  
+"option": ["terraria", "terraria", "esse", "terraria"],  
+"correct_option_index": 2
+},
+{  
+"question": "Quantos bosses Dark Souls 1 tem?",  
+"option": ["35", "29", "17", "32"],  
+"correct_option_index": 3
+},
 ]

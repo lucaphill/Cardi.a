@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://couxuy5er2lmj" path="res://scenes/main scenes/chatgpt/main_GPT.tscn" id="2_3nb76"]
 [ext_resource type="PackedScene" uid="uid://d2ljgebdk6xsk" path="res://scenes/main scenes/chatgpt/chat_interface.tscn" id="2_oucoa"]
 [ext_resource type="PackedScene" uid="uid://3kjpwt6khs0" path="res://scenes/cardSlot.tscn" id="4_wm8lt"]
-[ext_resource type="AudioStream" uid="uid://2fs8u1v74f2w" path="res://assents/music/MusicSusto.mp3" id="5_oucoa"]
 
 [node name="Chat" type="Node2D" unique_id=605241873]
 script = ExtResource("1_42fmu")
@@ -29,10 +28,5 @@ text = "voltar"
 position = Vector2(785, 435)
 
 [node name="MainGPT" parent="." unique_id=2050167096 instance=ExtResource("2_3nb76")]
-
-[node name="BackgroundMusic" type="AudioStreamPlayer" parent="." unique_id=1949453038]
-stream = ExtResource("5_oucoa")
-autoplay = true
-parameters/looping = true
 
 [connection signal="pressed" from="Control/Voltar" to="." method="_on_voltar_pressed"]

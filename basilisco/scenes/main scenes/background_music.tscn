@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://c526pbnxum4qw"]
+
+[ext_resource type="AudioStream" uid="uid://2fs8u1v74f2w" path="res://assents/music/MusicSusto.mp3" id="1_dxpkc"]
+[ext_resource type="Script" uid="uid://6r6yhtlxk1ym" path="res://scripts/background_music.gd" id="2_hny2g"]
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" unique_id=864887031]
+stream = ExtResource("1_dxpkc")
+autoplay = true
+parameters/looping = true
+script = ExtResource("2_hny2g")

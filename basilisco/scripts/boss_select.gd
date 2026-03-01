@@ -4,6 +4,7 @@ var button_type = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	#BackgroundMusic_menu.play_menu_music()
 	$Trascicoes/Fade_in.hide()
 	$Trascicoes/Fade_out/AnimationPlayer.play("fade_out")
 	$Trascicoes/Fade_out/Fade_out_Timer.start()
