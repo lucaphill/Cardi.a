@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://db3wixvbpvdtt"]
 
 [ext_resource type="Script" uid="uid://cp1gjq4jcx2u" path="res://scripts/tutorial_chat.gd" id="1_l1w72"]
-[ext_resource type="Texture2D" uid="uid://cmo5gixkcmmti" path="res://assents/sprites/Chat_tutorial.png" id="1_ndfcb"]
+[ext_resource type="Texture2D" uid="uid://dtl353atrg7e5" path="res://assents/sprites/chat_tutorial.png" id="2_en65o"]
 [ext_resource type="FontFile" uid="uid://dw6wfk8i82tbv" path="res://fonts/VCR_OSD_MONO_1.001.ttf" id="3_bh6de"]
 [ext_resource type="PackedScene" uid="uid://b05j34cynjhjg" path="res://scenes/fade_in.tscn" id="4_en65o"]
 [ext_resource type="PackedScene" uid="uid://gpmt15d7adk8" path="res://scenes/fade_out.tscn" id="5_bawhe"]
+[ext_resource type="PackedScene" uid="uid://couxuy5er2lmj" path="res://scenes/main scenes/chatgpt/main_GPT.tscn" id="6_a6paa"]
+[ext_resource type="PackedScene" uid="uid://3kjpwt6khs0" path="res://scenes/cardSlot.tscn" id="7_g5n1u"]
 
 [node name="Tutorial_Chat" type="Control" unique_id=2009948203]
 layout_mode = 3
@@ -13,34 +15,22 @@ offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("1_l1w72")
 
+[node name="CardSlot" parent="." unique_id=1090387939 instance=ExtResource("7_g5n1u")]
+position = Vector2(784, 444)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1711316676]
 layer = -1
 
 [node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1896660213]
 position = Vector2(641, 361)
-texture = ExtResource("1_ndfcb")
-
-[node name="continuar" type="Button" parent="." unique_id=1883946655]
-layout_mode = 0
-offset_left = 134.0
-offset_top = 633.0
-offset_right = 315.0
-offset_bottom = 698.0
-theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
-theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
-theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
-theme_override_colors/icon_hover_color = Color(1, 1, 1, 0)
-theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 0.03137255)
-theme_override_colors/icon_disabled_color = Color(1, 1, 1, 0)
-theme_override_fonts/font = ExtResource("3_bh6de")
-text = "Continuar"
+texture = ExtResource("2_en65o")
 
 [node name="voltar" type="Button" parent="." unique_id=1869362652]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 643.0
-offset_right = 117.0
-offset_bottom = 698.0
+offset_left = 24.0
+offset_top = 20.0
+offset_right = 154.0
+offset_bottom = 82.0
 theme_override_colors/icon_normal_color = Color(1, 1, 1, 0)
 theme_override_colors/icon_focus_color = Color(1, 1, 1, 0)
 theme_override_colors/icon_pressed_color = Color(1, 1, 1, 0)
@@ -59,6 +49,7 @@ visible = false
 [node name="Fade_in_Timer" type="Timer" parent="Trascicoes/Fade_in" unique_id=669876629]
 
 [node name="Fade_out" parent="Trascicoes" unique_id=971055919 instance=ExtResource("5_bawhe")]
+visible = false
 offset_left = 1.0
 offset_top = -1.0
 offset_right = 1.0
@@ -66,7 +57,26 @@ offset_bottom = -1.0
 
 [node name="Fade_out_Timer" type="Timer" parent="Trascicoes/Fade_out" unique_id=984604369]
 
-[connection signal="pressed" from="continuar" to="." method="_on_button_pressed"]
+[node name="MainGPT" parent="." unique_id=2050167096 instance=ExtResource("6_a6paa")]
+
+[node name="jogueUmaCarta" type="RichTextLabel" parent="." unique_id=1258784924]
+layout_mode = 0
+offset_left = 575.0
+offset_top = 236.0
+offset_right = 989.0
+offset_bottom = 276.0
+theme_override_colors/default_color = Color(0, 0.1764706, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_bh6de")
+theme_override_fonts/bold_font = ExtResource("3_bh6de")
+theme_override_fonts/bold_italics_font = ExtResource("3_bh6de")
+theme_override_fonts/italics_font = ExtResource("3_bh6de")
+theme_override_fonts/mono_font = ExtResource("3_bh6de")
+theme_override_font_sizes/normal_font_size = 21
+bbcode_enabled = true
+text = "Jogue qualquer carta para começar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [connection signal="pressed" from="voltar" to="." method="_on_voltar_pressed"]
 [connection signal="timeout" from="Trascicoes/Fade_in/Fade_in_Timer" to="." method="_on_fade_in_timer_timeout"]
 [connection signal="timeout" from="Trascicoes/Fade_out/Fade_out_Timer" to="." method="_on_fade_out_timer_timeout"]

@@ -1,0 +1,74 @@
+[
+  {
+    "fase": 1,
+    "descricao": "Fase 1: formato correto",
+    "codigo": "float x = 3.14;\nprintf( ___ , x);",
+    "output": "3.14",
+    "cartas": ["\"%f\"", "\"%d\"", "\"%c\"", "\"%s\""],
+    "correta": 0
+  },
+  {
+    "fase": 1,
+    "descricao": "Fase 1: tipo correto",
+    "codigo": "___ letra = 'A';\nprintf(\"%c\", letra);",
+    "output": "A",
+    "cartas": ["char", "int", "float", "string"],
+    "correta": 0
+  },
+  {
+    "fase": 1,
+    "descricao": "Fase 1: scanf",
+    "codigo": "int x;\nscanf( ___ , &x);\nprintf(\"%d\", x);",
+    "output": "(valor digitado)",
+    "cartas": ["\"%d\"", "\"%f\"", "x", "\"%s\""],
+    "correta": 0
+  },
+  {
+    "fase": 2,
+    "descricao": "Fase 2: divisao inteira",
+    "codigo": "int x = 7, y = 2;\nprintf(\"%d\", x ___ y);",
+    "output": "3",
+    "cartas": ["/", "%", "*", "-"],
+    "correta": 0
+  },
+  {
+    "fase": 2,
+    "descricao": "Fase 2: operador correto",
+    "codigo": "int x = 5;\nx ___ ;\nprintf(\"%d\", x);",
+    "output": "6",
+    "cartas": ["++", "--", "*=2", "+=2"],
+    "correta": 0
+  },
+  {
+    "fase": 2,
+    "descricao": "Fase 2: atribuicao",
+    "codigo": "int x = 10;\nx ___ 3;\nprintf(\"%d\", x);",
+    "output": "7",
+    "cartas": ["-=", "+=", "*=", "/="],
+    "correta": 0
+  },
+  {
+    "fase": 3,
+    "descricao": "Fase 3: operador logico",
+    "codigo": "int x = 5;\nif (x > 3 ___ x < 10)\n  printf(\"ok\");",
+    "output": "ok",
+    "cartas": ["&&", "||", "!", "=="],
+    "correta": 0
+  },
+  {
+    "fase": 3,
+    "descricao": "Fase 3: while",
+    "codigo": "int i = 0;\nwhile(i ___ 3){\n  i++;\n}\nprintf(\"%d\", i);",
+    "output": "3",
+    "cartas": ["<", ">", "==", "!="],
+    "correta": 0
+  },
+  {
+    "fase": 3,
+    "descricao": "Fase 3: vetor",
+    "codigo": "int v[3] = {4, 8, 15};\nprintf(\"%d\", v[ ___ ]);",
+    "output": "8",
+    "cartas": ["1", "0", "2", "3"],
+    "correta": 0
+  }
+]

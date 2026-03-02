@@ -9,6 +9,9 @@
 [node name="Chat" type="Node2D" unique_id=605241873]
 script = ExtResource("1_42fmu")
 
+[node name="CardSlot" parent="." unique_id=1090387939 instance=ExtResource("4_wm8lt")]
+position = Vector2(785, 435)
+
 [node name="Chat_interface" parent="." unique_id=2012376245 instance=ExtResource("2_oucoa")]
 
 [node name="Control" type="Control" parent="." unique_id=219834149]
@@ -24,9 +27,6 @@ offset_top = 661.0
 offset_right = 1262.0
 offset_bottom = 698.0
 text = "voltar"
-
-[node name="CardSlot" parent="." unique_id=1090387939 instance=ExtResource("4_wm8lt")]
-position = Vector2(785, 435)
 
 [node name="MainGPT" parent="." unique_id=2050167096 instance=ExtResource("2_3nb76")]
 

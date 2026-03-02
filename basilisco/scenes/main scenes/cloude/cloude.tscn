@@ -1,6 +1,20 @@
 [gd_scene format=3 uid="uid://d337sfjrexjkw"]
 
 [ext_resource type="Script" uid="uid://bh00jcwcm54xb" path="res://scripts/cloude.gd" id="1_lwafn"]
+[ext_resource type="Texture2D" uid="uid://cq5deg4k2k78" path="res://assents/jp/backgroundjogo2.png" id="2_vkk0i"]
+[ext_resource type="Texture2D" uid="uid://tr0eh4wweptg" path="res://assents/jp/Projeto (20260226082008).png" id="3_nvwb7"]
+[ext_resource type="Texture2D" uid="uid://cc3sn5bcicoh" path="res://assents/jp/seraqvai.png" id="4_d0hqo"]
+[ext_resource type="Script" uid="uid://byme5voge4nxd" path="res://scenes/main scenes/cloude/claude_interface.gd" id="4_mxq18"]
+[ext_resource type="PackedScene" uid="uid://3kjpwt6khs0" path="res://scenes/cardSlot.tscn" id="5_a7q58"]
+[ext_resource type="Script" uid="uid://vrmd5hxtegt7" path="res://scenes/main scenes/cloude/claude_card_manager.gd" id="6_d0hqo"]
+[ext_resource type="Texture2D" uid="uid://dtp6fowwep80g" path="res://assents/jp/faladevv.png" id="6_e53mm"]
+[ext_resource type="FontFile" uid="uid://bi5n0ab36d8ql" path="res://assents/jp/Amarante-Regular.ttf" id="6_r484f"]
+[ext_resource type="FontFile" uid="uid://ds4a4ghcm7r8d" path="res://assents/jp/Bouncy Clouds Demo.otf" id="7_e53mm"]
+[ext_resource type="Script" uid="uid://dgniklo70ee2m" path="res://scenes/main scenes/cloude/claude_player_hand.gd" id="7_r484f"]
+[ext_resource type="Script" uid="uid://cbsvdwtdn0pmp" path="res://scenes/main scenes/cloude/claude_deck.gd" id="8_e53mm"]
+[ext_resource type="Script" uid="uid://ek42hnfn0uer" path="res://scenes/main scenes/cloude/claude_input_manager.gd" id="9_nl1h6"]
+[ext_resource type="Texture2D" uid="uid://cscurdhl8v3fy" path="res://assents/jp/nuvemcarta.png" id="10_nvwb7"]
+[ext_resource type="Texture2D" uid="uid://bt30rnytfkjux" path="res://assents/jp/pixil-frame-0.png" id="11_d0hqo"]
 
 [node name="Cloude" type="Node2D" unique_id=1913107958]
 script = ExtResource("1_lwafn")
@@ -12,11 +26,133 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="voltar" type="Button" parent="Control" unique_id=2100503621]
+top_level = true
 layout_mode = 0
-offset_left = 1146.0
+offset_left = 1157.0
 offset_top = 648.0
-offset_right = 1229.0
+offset_right = 1246.0
 offset_bottom = 682.0
 text = "voltar"
+
+[node name="backcloude" type="Sprite2D" parent="." unique_id=179256448]
+position = Vector2(643.00006, 363)
+scale = Vector2(1.722973, 1.4604462)
+texture = ExtResource("2_vkk0i")
+
+[node name="o cara em pessoa" type="Sprite2D" parent="backcloude" unique_id=1751191846]
+position = Vector2(-204.29805, -3.4236155)
+scale = Vector2(0.81988657, 0.7043131)
+texture = ExtResource("3_nvwb7")
+
+[node name="parededenuvens" type="Sprite2D" parent="backcloude" unique_id=1689399748]
+position = Vector2(-104.47059, 207.47086)
+rotation = 1.4923459
+scale = Vector2(0.47588745, 0.46733105)
+texture = ExtResource("4_d0hqo")
+
+[node name="nuvem2" type="Sprite2D" parent="backcloude/parededenuvens" unique_id=988120842]
+position = Vector2(-503.71246, -6.8324475)
+rotation = 0.22895679
+scale = Vector2(0.9831707, 0.8583647)
+texture = ExtResource("4_d0hqo")
+
+[node name="nuvem3" type="Sprite2D" parent="backcloude/parededenuvens" unique_id=199076969]
+position = Vector2(-857.6697, -30.737839)
+rotation = 0.017616749
+scale = Vector2(0.81401235, 0.7302575)
+texture = ExtResource("4_d0hqo")
+
+[node name="efeito" type="Sprite2D" parent="backcloude" unique_id=863262101]
+position = Vector2(226.93329, -46.56111)
+scale = Vector2(0.29178613, 0.27589324)
+texture = ExtResource("10_nvwb7")
+
+[node name="Sprite2D2" type="Sprite2D" parent="backcloude" unique_id=966776871]
+
+[node name="Sprite2D" type="Sprite2D" parent="backcloude" unique_id=1965943955]
+position = Vector2(223.45097, -208.84026)
+scale = Vector2(0.8608003, 0.44946128)
+texture = ExtResource("6_e53mm")
+
+[node name="ClaudeInterface" type="Control" parent="." unique_id=159483332]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("4_mxq18")
+
+[node name="FaseLabel" type="Label" parent="ClaudeInterface" unique_id=1794418957]
+top_level = true
+layout_mode = 0
+offset_left = 831.0
+offset_top = 47.0
+offset_right = 1253.0
+offset_bottom = 140.0
+theme_override_colors/font_color = Color(0, 0.6591482, 0.5847179, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0.57254905, 0)
+theme_override_fonts/font = ExtResource("7_e53mm")
+theme_override_font_sizes/font_size = 32
+text = "fase 1 | pergunta 1/9 | acertos : 0"
+
+[node name="CodigoLabel" type="Label" parent="ClaudeInterface" unique_id=994785376]
+layout_mode = 0
+offset_left = 939.0
+offset_top = 234.0
+offset_right = 1017.0
+offset_bottom = 255.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("6_r484f")
+
+[node name="OutputLabel" type="Label" parent="ClaudeInterface" unique_id=1716540600]
+layout_mode = 0
+offset_left = 940.0
+offset_top = 206.0
+offset_right = 1000.0
+offset_bottom = 229.0
+theme_override_colors/font_color = Color(0.92872584, 0.35053292, 9.62615e-07, 1)
+text = "Output:"
+
+[node name="FeedbackLabel" type="Label" parent="ClaudeInterface" unique_id=1546854488]
+layout_mode = 0
+offset_left = 608.0
+offset_top = 88.0
+offset_right = 648.0
+offset_bottom = 121.0
+theme_override_fonts/font = ExtResource("6_r484f")
+theme_override_font_sizes/font_size = 26
+
+[node name="Temporizador" type="Timer" parent="ClaudeInterface" unique_id=789043368]
+
+[node name="TimerLabel" type="Label" parent="ClaudeInterface" unique_id=932904108]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 23.0
+offset_right = 717.0
+offset_bottom = 84.0
+theme_override_colors/font_color = Color(0, 0.6591482, 0.5847179, 1)
+theme_override_fonts/font = ExtResource("7_e53mm")
+theme_override_font_sizes/font_size = 30
+
+[node name="MainClaude" type="Node2D" parent="." unique_id=479494792]
+
+[node name="Claude_CardManager" type="Node2D" parent="MainClaude" unique_id=1211383466]
+script = ExtResource("6_d0hqo")
+
+[node name="Claude_PlayerHand" type="Node2D" parent="MainClaude" unique_id=1507140618]
+script = ExtResource("7_r484f")
+
+[node name="Claude_Deck" type="Node2D" parent="MainClaude" unique_id=1232947257]
+script = ExtResource("8_e53mm")
+
+[node name="Claude_InputManager" type="Node2D" parent="MainClaude" unique_id=1362143778]
+script = ExtResource("9_nl1h6")
+
+[node name="CardSlot" parent="." unique_id=1090387939 instance=ExtResource("5_a7q58")]
+position = Vector2(682, 302)
+
+[node name="Sprite2D" type="Sprite2D" parent="CardSlot" unique_id=1804413352]
+position = Vector2(6, -1.9999847)
+scale = Vector2(1.3777777, 1.2075471)
+texture = ExtResource("11_d0hqo")
 
 [connection signal="pressed" from="Control/voltar" to="." method="_on_voltar_pressed"]

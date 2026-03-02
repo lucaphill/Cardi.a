@@ -1,4 +1,5 @@
 extends Control
+const main_music = preload("res://assents/music/MusicSusto.mp3")
 
 @onready var Display_text = $Pergunta
 @onready var Option_A = $Resposta_A
@@ -128,14 +129,17 @@ func update_timer(color: String = "white"):
 func chat_game_end():
 	if timer <= 0:
 
-		if score_count > chat_score_count:
+		if score_count > chat_score_count + 150:
 			call_deferred("_go_to_victory")
+			BackgroundMusic_menu._play_music(main_music)
 			
 		elif score_count < chat_score_count:
 			call_deferred("_go_to_defeat")
+			BackgroundMusic_menu._play_music(main_music)
 			
 		else:
 			call_deferred("_go_to_defeat")
+			BackgroundMusic_menu._play_music(main_music)
 
 
 func _go_to_victory():
