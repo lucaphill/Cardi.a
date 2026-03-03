@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cb7iebgvll82p"]
+
+[ext_resource type="Script" uid="uid://dq7ve1n8efjrd" path="res://scripts/chat_derrota.gd" id="1_fjoae"]
+[ext_resource type="Texture2D" uid="uid://cnkp265r31f7c" path="res://assents/sprites/chat_derrota.png" id="2_mvpo3"]
+[ext_resource type="FontFile" uid="uid://dw6wfk8i82tbv" path="res://fonts/VCR_OSD_MONO_1.001.ttf" id="2_r47jc"]
+
+[node name="chat_derrota" type="Node2D" unique_id=450193340]
+script = ExtResource("1_fjoae")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1223428821]
+layer = -1
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer" unique_id=1778125352]
+position = Vector2(640, 360)
+texture = ExtResource("2_mvpo3")
+
+[node name="Control" type="Control" parent="." unique_id=1118604344]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control" unique_id=585294894]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 327.0
+offset_right = 824.0
+offset_bottom = 379.0
+text = "voltar"
+
+[node name="derrota" type="RichTextLabel" parent="Control" unique_id=175099524]
+layout_mode = 0
+offset_left = 517.0
+offset_top = 54.0
+offset_right = 1041.0
+offset_bottom = 247.0
+theme_override_colors/default_color = Color(0.5372549, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_r47jc")
+theme_override_fonts/bold_font = ExtResource("2_r47jc")
+theme_override_fonts/bold_italics_font = ExtResource("2_r47jc")
+theme_override_font_sizes/normal_font_size = 100
+bbcode_enabled = true
+text = "Derrota"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

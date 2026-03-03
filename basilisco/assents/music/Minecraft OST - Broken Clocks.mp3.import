@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dtaoglr5ap0no"
+path="res://.godot/imported/Minecraft OST - Broken Clocks.mp3-320c8de1f4936856e6e1c3c483dccba4.mp3str"
+
+[deps]
+
+source_file="res://assents/music/Minecraft OST - Broken Clocks.mp3"
+dest_files=["res://.godot/imported/Minecraft OST - Broken Clocks.mp3-320c8de1f4936856e6e1c3c483dccba4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

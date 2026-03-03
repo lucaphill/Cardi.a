@@ -21,6 +21,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Voltar" type="Button" parent="Control" unique_id=396378183]
+visible = false
 layout_mode = 0
 offset_left = 1133.0
 offset_top = 661.0

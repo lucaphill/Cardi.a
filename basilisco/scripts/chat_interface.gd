@@ -1,5 +1,7 @@
 extends Control
 const main_music = preload("res://assents/music/MusicSusto.mp3")
+const vitoria_music = preload("res://assents/music/Minecraft OST - otherside.mp3")
+const derrota_music = preload("res://assents/music/Minecraft OST - Broken Clocks.mp3")
 
 @onready var Display_text = $Pergunta
 @onready var Option_A = $Resposta_A
@@ -144,8 +146,10 @@ func chat_game_end():
 
 func _go_to_victory():
 	if get_tree():
-		get_tree().change_scene_to_file("res://scenes/vitoria.tscn")
+		get_tree().change_scene_to_file("res://scenes/main scenes/chatgpt/chat_vitoria.tscn")
+		BackgroundMusic_menu._play_music(vitoria_music)
 
 func _go_to_defeat():
 	if get_tree():
-		get_tree().change_scene_to_file("res://scenes/derrota.tscn")
+		get_tree().change_scene_to_file("res://scenes/main scenes/chatgpt/chat_derrota.tscn")
+		BackgroundMusic_menu._play_music(derrota_music)

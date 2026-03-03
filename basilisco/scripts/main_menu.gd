@@ -1,10 +1,9 @@
 extends Node2D
 
 var buttton_type = null
-const music = preload("res://assents/music/MusicSusto.mp3")
 
 func _ready() -> void:
-	BackgroundMusic_menu._play_music(music)
+	#BackgroundMusic_menu.play_menu_music()
 	$Transcicoes/Fade_out/AnimationPlayer.play("fade_out")
 	$Transcicoes/Fade_out/Fade_out_Timer.start()
 	$CanvasLayer.show()
