@@ -13,13 +13,19 @@ config_version=5
 config/name="jogothais"
 run/main_scene="uid://dbfa4mxkvdbs6"
 config/features=PackedStringArray("4.6", "Forward Plus")
+boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://assents/icon.svg"
+
+[autoload]
+
+BackgroundMusic_menu="*uid://c526pbnxum4qw"
 
 [display]
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/stretch/mode="canvas_items"
+window/size/always_on_top=true
+window/stretch/mode="viewport"
 mouse_cursor/custom_image="uid://dpkle0jtpabo6"
 
 [physics]
@@ -30,3 +36,5 @@ mouse_cursor/custom_image="uid://dpkle0jtpabo6"
 
 textures/canvas_textures/default_texture_filter=3
 rendering_device/driver.windows="d3d12"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

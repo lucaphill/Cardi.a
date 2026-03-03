@@ -1,12 +1,13 @@
 extends Node2D
 
 @onready var calculo = $"../UI/Calculo"
-@onready var pontos_label = $"../UI/Pontos"
+@onready var pontos_label = $"../UI/VBoxContainer/Pontos"
 @onready var deck = $"../Deck"
-@onready var enemy_label = $"../UI/Pontos_inimigo"
+@onready var enemy_label = $"../UI/VBoxContainer/Pontos_inimigo"
 @onready var turn_timer = $TurnTimer
 @onready var intent_label = $"../UI/Intencao"
 
+var button_type = null
 
 var selected_cards = []
 var score = 0
@@ -14,8 +15,8 @@ var click_lock = false
 var fusion_used = false
 
 #posiçõa das cartas na tela
-var start_x = 420
-var spacing = 150
+var start_x = 520
+var spacing = 120
 var y_pos = 650
 var center_offset = 850 
 
@@ -214,7 +215,7 @@ func _on_botao_fundir_pressed() -> void:
 
 #Funções Gemini
 func update_enemy_ui():
-	enemy_label.text = "Inimigo: " + str(enemy_score)
+	enemy_label.text = "Gemini: " + str(enemy_score)
 
 func enemy_turn():
 	var gain = next_enemy_action["ganha"]
@@ -243,13 +244,27 @@ func check_game_end():
 			return
 		elif enemy_score >= max_score:
 			call_deferred("_go_to_defeat")
+			
+
+func _on_fade_in_timer_timeout() -> void:
+	if button_type == "vitoria":
+		get_tree().change_scene_to_file("res://scenes/vitoria.tscn")
+	elif  button_type == "derrota":
+		get_tree().change_scene_to_file("res://scenes/derrota.tscn")
+	
 
 func _go_to_victory():
 	if get_tree():
-		get_tree().change_scene_to_file("res://scenes/vitoria.tscn")
+		button_type = "vitoria"
+		$"../Trascicoes/Fade_in".show()
+		$"../Trascicoes/Fade_in/Fade_in_Timer".start()
+		$"../Trascicoes/Fade_in/AnimationPlayer".play("fade_in")
 
 func _go_to_defeat():
-	get_tree().change_scene_to_file("res://scenes/derrota.tscn")
+	button_type = "derrota"
+	$"../Trascicoes/Fade_in".show()
+	$"../Trascicoes/Fade_in/Fade_in_Timer".start()
+	$"../Trascicoes/Fade_in/AnimationPlayer".play("fade_in")
 
 func generate_enemy_intent():
 	var rand = randf()
@@ -257,14 +272,14 @@ func generate_enemy_intent():
 	if rand < 0.5:
 	# ganha pontos
 		next_enemy_action = {
-		"ganha": randi_range(15, 20),
+		"ganha": randi_range(15, 27),
 		"tira": 0
 		}
 	elif rand < 0.9:
 	# ataca jogador
 		next_enemy_action = {
 		"ganha": 0,
-		"tira": randi_range(10, 16)
+		"tira": randi_range(10, 18)
 		}
 	else:
 	# ação híbrida 🔥

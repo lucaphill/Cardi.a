@@ -1,0 +1,277 @@
+[gd_scene format=3 uid="uid://yv6u8uceym7p"]
+
+[ext_resource type="Script" uid="uid://vjdu1pa46b5g" path="res://scenes/main scenes/gemini/gimini_tutorial.gd" id="1_mlyc2"]
+[ext_resource type="Texture2D" uid="uid://d4edmih7sdqds" path="res://scenes/main scenes/gemini/sprites_gemini/Tutoras_gemini.png" id="1_o22e6"]
+[ext_resource type="FontFile" uid="uid://dw6wfk8i82tbv" path="res://fonts/VCR_OSD_MONO_1.001.ttf" id="2_d2ntx"]
+[ext_resource type="FontFile" uid="uid://d2625kwnfyjs8" path="res://fonts/runede-uniform-alternate.otf" id="3_d2ntx"]
+[ext_resource type="Texture2D" uid="uid://dr5yaygc8x2r2" path="res://scenes/main scenes/gemini/sprites_gemini/tutorial_1.png" id="4_iv3ih"]
+[ext_resource type="Texture2D" uid="uid://h6yp4lqmu45y" path="res://scenes/main scenes/gemini/sprites_gemini/finalizar_tutorial.png" id="5_cefi3"]
+[ext_resource type="Texture2D" uid="uid://dryi7aa0xrnmu" path="res://scenes/main scenes/gemini/sprites_gemini/fundir_tutorial.png" id="6_fa8as"]
+[ext_resource type="Texture2D" uid="uid://cbpyxr0j6psyx" path="res://scenes/main scenes/gemini/sprites_gemini/tutorial_2.png" id="7_fa8as"]
+[ext_resource type="PackedScene" uid="uid://gpmt15d7adk8" path="res://scenes/fade_out.tscn" id="9_18g3h"]
+[ext_resource type="PackedScene" uid="uid://b05j34cynjhjg" path="res://scenes/fade_in.tscn" id="10_aipi7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fa8as"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.59921, 0, 0.04865723, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7tt7"]
+bg_color = Color(0.3380997, 0.33809972, 0.33809954, 0.7019608)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.6, 0, 0.047058824, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mlyc2"]
+bg_color = Color(0, 0, 0, 0.6392157)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.6, 0, 0.047058824, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_18g3h"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(2.2621452e-06, 0, 0.6584693, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aipi7"]
+bg_color = Color(0.3380997, 0.33809972, 0.33809954, 0.7019608)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(2.2621452e-06, 0, 0.6584693, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3wf68"]
+bg_color = Color(0, 0, 0, 0.6392157)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(2.2621452e-06, 0, 0.6584693, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iv3ih"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Gimini_tutorial" type="Node2D" unique_id=1886331948]
+script = ExtResource("1_mlyc2")
+
+[node name="Control" type="Control" parent="." unique_id=587754778]
+z_index = 45
+layout_mode = 3
+anchors_preset = 0
+offset_right = 98.0
+offset_bottom = 48.0
+
+[node name="Voltar" type="Button" parent="Control" unique_id=14540914]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 630.0
+offset_right = 173.0
+offset_bottom = 694.0
+theme_override_fonts/font = ExtResource("3_d2ntx")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_fa8as")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_h7tt7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mlyc2")
+text = "Voltar"
+
+[node name="Continuar" type="Button" parent="Control" unique_id=1006642538]
+layout_mode = 0
+offset_left = 1081.0
+offset_top = 630.0
+offset_right = 1249.0
+offset_bottom = 694.0
+theme_override_fonts/font = ExtResource("3_d2ntx")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_18g3h")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_aipi7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3wf68")
+text = "Continuar"
+
+[node name="TutorasGemini" type="Sprite2D" parent="." unique_id=703707199]
+position = Vector2(640, 360)
+texture = ExtResource("1_o22e6")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TutorasGemini" unique_id=662353504]
+offset_left = -134.0
+offset_top = -327.0
+offset_right = 128.0
+offset_bottom = -250.0
+theme_override_fonts/normal_font = ExtResource("3_d2ntx")
+theme_override_font_sizes/normal_font_size = 58
+theme_override_styles/normal = SubResource("StyleBoxFlat_iv3ih")
+bbcode_enabled = true
+text = "[rainbow freq=0.1 sat=1.0 val=0.8]GEMINI[/rainbow]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="TutorasGemini" unique_id=779553162]
+offset_left = -611.0
+offset_top = -240.0
+offset_right = 612.0
+offset_bottom = -102.0
+theme_override_constants/line_separation = 2
+theme_override_fonts/normal_font = ExtResource("2_d2ntx")
+theme_override_font_sizes/normal_font_size = 23
+bbcode_enabled = true
+text = "O Gemini entrou na corrida da I.A. como a primeira inteligência nativamente multimodal, integrando-se ao ecossistema [rainbow freq=0.3]Google[/rainbow] para processar texto, imagem e código simultaneamente. Além disso ele se destaca principalmente na área [shake]matemática[/shake] por unir o raciocínio lógico avançado à execução de cálculos em tempo real, permitindo resolver problemas complexos e analisar dados visuais com precisão técnica superior."
+horizontal_alignment = 3
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="TutorasGemini" unique_id=1545520194]
+offset_left = -155.0
+offset_top = -103.0
+offset_right = 142.0
+offset_bottom = -29.0
+theme_override_fonts/normal_font = ExtResource("3_d2ntx")
+theme_override_font_sizes/normal_font_size = 53
+bbcode_enabled = true
+text = "[wave]COMO JOGAR"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tutorial1" type="Sprite2D" parent="TutorasGemini" unique_id=633725503]
+position = Vector2(-458, 183.00006)
+scale = Vector2(0.77734375, 0.7754491)
+texture = ExtResource("4_iv3ih")
+
+[node name="RichTextLabel4" type="RichTextLabel" parent="TutorasGemini" unique_id=1869152480]
+offset_left = -583.0
+offset_top = -7.0
+offset_right = -328.0
+offset_bottom = 106.0
+theme_override_fonts/normal_font = ExtResource("2_d2ntx")
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "A cada turno, você receberá 6 cartas. Cartas  [wave amp=8][color=blue]azuis[/color][/wave] representam números positivos e as [wave amp=8][color=red]vermelhas[/color][/wave] os negativos."
+autowrap_mode = 2
+horizontal_alignment = 3
+vertical_alignment = 3
+
+[node name="RichTextLabel5" type="RichTextLabel" parent="TutorasGemini" unique_id=420167911]
+offset_left = -288.0
+offset_top = -7.0
+offset_right = -10.0
+offset_bottom = 329.0
+theme_override_fonts/normal_font = ExtResource("2_d2ntx")
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "Por turno você deve escolher 2 cartas, após isso existem 2 ações possiveis [wave amp=8][color=crimson]Finalizar Turno[/color][/wave] e [wave amp=8][color=purple]Fundir[/color][/wave].
+
+
+
+
+
+
+
+
+
+
+
+Ao [wave amp=8][color=purple]Fundir[/color][/wave] você soma as 2 cartas escolhidas e [rainbow]cria uma nova carta[/rainbow] com base no resultado."
+autowrap_mode = 2
+horizontal_alignment = 3
+vertical_alignment = 3
+
+[node name="FinalizarTutorial" type="Sprite2D" parent="TutorasGemini" unique_id=708898130]
+position = Vector2(-150, 195)
+texture = ExtResource("5_cefi3")
+
+[node name="FundirTutorial" type="Sprite2D" parent="TutorasGemini" unique_id=1628331280]
+position = Vector2(-153, 127)
+texture = ExtResource("6_fa8as")
+
+[node name="RichTextLabel6" type="RichTextLabel" parent="TutorasGemini" unique_id=445418730]
+offset_left = 29.0
+offset_top = -7.0
+offset_right = 291.0
+offset_bottom = 191.0
+theme_override_fonts/normal_font = ExtResource("2_d2ntx")
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "Ao escolher 2 cartas e [wave amp=8][color=crimson]Finalizar o turno[/color][/wave], as duas serão somadas.
+
+Caso o resultado seja positivo a soma será [rainbow]acrescentada[/rainbow] a sua pontuação, caso seja negativa o resultado [shake][color=red]diminuirá[/color][/shake] a pontuação do Gemini."
+horizontal_alignment = 3
+
+[node name="Tutorial2" type="Sprite2D" parent="TutorasGemini" unique_id=2086785293]
+position = Vector2(156, 239)
+scale = Vector2(0.67670554, 0.68223476)
+texture = ExtResource("7_fa8as")
+
+[node name="RichTextLabel7" type="RichTextLabel" parent="TutorasGemini" unique_id=1538203024]
+offset_left = 319.0
+offset_top = -9.0
+offset_right = 606.0
+offset_bottom = 157.0
+theme_override_fonts/normal_font = ExtResource("2_d2ntx")
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "Assim como você, o [rainbow freq=0.1 sat=1.0 val=0.8]Gemini[/rainbow] pode aumentar a pontuação dele e diminuir a sua, mas para ser mais justo (pra você claro) ele sempre irá declarar a próxima ação. 
+
+Seu objetivo é fazer [pulse color=green]100[/pulse] pontos antes dele."
+horizontal_alignment = 3
+
+[node name="RichTextLabel8" type="RichTextLabel" parent="TutorasGemini" unique_id=1531148485]
+offset_left = 342.0
+offset_top = 172.0
+offset_right = 564.0
+offset_bottom = 245.0
+theme_override_fonts/normal_font = ExtResource("3_d2ntx")
+theme_override_font_sizes/normal_font_size = 44
+text = "BOA SORTE!"
+
+[node name="Trascicoes" type="CanvasLayer" parent="." unique_id=2054277253]
+
+[node name="Fade_in" parent="Trascicoes" unique_id=2070389534 instance=ExtResource("10_aipi7")]
+visible = false
+
+[node name="Fade_in_Timer" type="Timer" parent="Trascicoes/Fade_in" unique_id=99923337]
+
+[node name="Fade_out" parent="Trascicoes" unique_id=971055919 instance=ExtResource("9_18g3h")]
+
+[node name="Fade_out_Timer" type="Timer" parent="Trascicoes/Fade_out" unique_id=830070096]
+
+[connection signal="pressed" from="Control/Voltar" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="Control/Continuar" to="." method="_on_continuar_pressed"]
+[connection signal="timeout" from="Trascicoes/Fade_in/Fade_in_Timer" to="." method="_on_fade_in_timer_timeout"]
+[connection signal="timeout" from="Trascicoes/Fade_out/Fade_out_Timer" to="." method="_on_fade_out_timer_timeout"]

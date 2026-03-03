@@ -9,6 +9,9 @@ func _ready():
 func draw_hand():
 	for i in range(6):
 		var card = card_scene.instantiate()
+		
+		card.scale = Vector2(0.8, 0.8)
+		
 		var value = randi_range(1, 9)
 		
 		if randf() < 0.3:
@@ -17,7 +20,7 @@ func draw_hand():
 		card.set_value(value)
 		player_hand.add_child(card)
 		
-		var final_pos = Vector2(420 + i * 150, 650)
+		var final_pos = Vector2(510 + i * 120, 650)
 
 		# começa fora da tela
 		card.position = Vector2(final_pos.x, 800)

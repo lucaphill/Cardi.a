@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cfhgddstsxxph"]
+
+[ext_resource type="Script" uid="uid://gm57ig8jkfor" path="res://scripts/vitoria_chat_card.gd" id="1_jnn7h"]
+[ext_resource type="Script" uid="uid://cxfnmcq1lyl32" path="res://scripts/vitoria_chat_deck.gd" id="2_7txjb"]
+[ext_resource type="Script" uid="uid://c34yp146nn0ma" path="res://scripts/vitoria_chat_hand.gd" id="3_l1vc8"]
+[ext_resource type="Script" uid="uid://bojpf613jsgqc" path="res://scripts/vitoria_imput_manager.gd" id="4_yy1jc"]
+
+[node name="cartas_vitoria" type="Node2D" unique_id=1442977371]
+position = Vector2(628, 160)
+
+[node name="vitoria_chat_card" type="Node2D" parent="." unique_id=444486430]
+script = ExtResource("1_jnn7h")
+
+[node name="vitoria_chat_deck" type="Node2D" parent="." unique_id=899296270]
+script = ExtResource("2_7txjb")
+
+[node name="vitoria_chat_hand" type="Node2D" parent="." unique_id=459652179]
+script = ExtResource("3_l1vc8")
+
+[node name="vitoria_imput_manager" type="Node2D" parent="." unique_id=997941717]
+script = ExtResource("4_yy1jc")

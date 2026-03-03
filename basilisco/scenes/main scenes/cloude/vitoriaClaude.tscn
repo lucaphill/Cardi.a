@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://b47qhoyeocmho"]
+
+[ext_resource type="Script" uid="uid://doppxs4anfbrv" path="res://scripts/vitoria.gd" id="1_ytysm"]
+[ext_resource type="FontFile" uid="uid://bi5n0ab36d8ql" path="res://assents/jp/Amarante-Regular.ttf" id="2_1mtck"]
+[ext_resource type="Texture2D" uid="uid://d05bmkit14hm7" path="res://assents/jp/vuado.png" id="3_dp2ta"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5hw06"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2p86a"]
+bg_color = Color(0.34706846, 0.34706825, 0.3470683, 0.654902)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yv7p2"]
+bg_color = Color(0.14117648, 0.14117648, 0.14117648, 0.81960785)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="Vitoria" type="Node2D" unique_id=1827862133]
+script = ExtResource("1_ytysm")
+
+[node name="Control" type="Control" parent="." unique_id=123267149]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="RichTextLabel" parent="Control" unique_id=531952554]
+top_level = true
+layout_mode = 0
+offset_left = 450.0
+offset_top = 58.0
+offset_right = 802.0
+offset_bottom = 242.0
+theme_override_colors/default_color = Color(0, 0, 0.6784314, 1)
+theme_override_fonts/normal_font = ExtResource("2_1mtck")
+theme_override_font_sizes/normal_font_size = 94
+bbcode_enabled = true
+text = "Vitoria!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="Control" unique_id=1346967092]
+top_level = true
+layout_mode = 0
+offset_left = 568.0
+offset_top = 577.0
+offset_right = 712.0
+offset_bottom = 643.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5hw06")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2p86a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yv7p2")
+text = "voltar"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=870024095]
+position = Vector2(644.5, 361.00003)
+scale = Vector2(1.2534244, 1.0848485)
+texture = ExtResource("3_dp2ta")
+
+[connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

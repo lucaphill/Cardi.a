@@ -23,10 +23,10 @@ texture = ExtResource("1_6l0bf")
 [node name="Pergunta" type="RichTextLabel" parent="." unique_id=1700238867]
 layout_mode = 1
 anchors_preset = -1
-offset_left = 522.0
-offset_top = 47.0
-offset_right = 1054.0
-offset_bottom = 256.0
+offset_left = 523.0
+offset_top = 69.0
+offset_right = 1055.0
+offset_bottom = 278.0
 theme_override_colors/default_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
 theme_override_fonts/normal_font = ExtResource("2_hm057")
 theme_override_fonts/bold_font = ExtResource("2_hm057")
@@ -38,6 +38,7 @@ theme_override_font_sizes/bold_font_size = 22
 theme_override_font_sizes/bold_italics_font_size = 22
 theme_override_font_sizes/italics_font_size = 22
 theme_override_font_sizes/mono_font_size = 21
+bbcode_enabled = true
 text = "Lorem ipsum dolor sit amet consectetur adipiscing elit quisque faucibus ex sapien vitae pellentesque sem placerat in id cursus mi pretium tellus duis convallis tempus."
 fit_content = true
 scroll_active = false
@@ -122,3 +123,73 @@ theme_override_font_sizes/mono_font_size = 19
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Chat_player_points" type="RichTextLabel" parent="." unique_id=820490327]
+layout_mode = 0
+offset_left = 1104.0
+offset_top = 12.0
+offset_right = 1259.0
+offset_bottom = 80.0
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("2_hm057")
+theme_override_fonts/bold_font = ExtResource("2_hm057")
+theme_override_fonts/bold_italics_font = ExtResource("2_hm057")
+theme_override_fonts/italics_font = ExtResource("2_hm057")
+theme_override_fonts/mono_font = ExtResource("2_hm057")
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+theme_override_font_sizes/bold_italics_font_size = 25
+theme_override_font_sizes/italics_font_size = 25
+theme_override_font_sizes/mono_font_size = 25
+bbcode_enabled = true
+text = "Pontos
+0"
+horizontal_alignment = 1
+
+[node name="UmSegundo" type="Timer" parent="." unique_id=2055849003]
+autostart = true
+
+[node name="Tempo_restante" type="RichTextLabel" parent="." unique_id=759422272]
+layout_mode = 0
+offset_left = 703.0
+offset_top = 13.0
+offset_right = 872.0
+offset_bottom = 53.0
+theme_override_colors/default_color = Color(0.5882353, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_hm057")
+theme_override_fonts/bold_font = ExtResource("2_hm057")
+theme_override_fonts/bold_italics_font = ExtResource("2_hm057")
+theme_override_fonts/italics_font = ExtResource("2_hm057")
+theme_override_fonts/mono_font = ExtResource("2_hm057")
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+theme_override_font_sizes/bold_italics_font_size = 25
+theme_override_font_sizes/italics_font_size = 25
+theme_override_font_sizes/mono_font_size = 25
+bbcode_enabled = true
+text = "tempo: 0s"
+horizontal_alignment = 1
+
+[node name="ChatGPT_points" type="RichTextLabel" parent="." unique_id=553300048]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 2.0
+offset_right = 465.0
+offset_bottom = 76.0
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("2_hm057")
+theme_override_fonts/bold_font = ExtResource("2_hm057")
+theme_override_fonts/bold_italics_font = ExtResource("2_hm057")
+theme_override_fonts/italics_font = ExtResource("2_hm057")
+theme_override_fonts/mono_font = ExtResource("2_hm057")
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 25
+theme_override_font_sizes/bold_italics_font_size = 25
+theme_override_font_sizes/italics_font_size = 25
+theme_override_font_sizes/mono_font_size = 25
+bbcode_enabled = true
+text = "Chat GPT
+0"
+horizontal_alignment = 1
+
+[connection signal="timeout" from="UmSegundo" to="." method="_on_timer_timeout"]

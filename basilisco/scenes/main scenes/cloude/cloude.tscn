@@ -1,14 +1,19 @@
 [gd_scene format=3 uid="uid://d337sfjrexjkw"]
 
 [ext_resource type="Script" uid="uid://bh00jcwcm54xb" path="res://scripts/cloude.gd" id="1_lwafn"]
-[ext_resource type="Texture2D" uid="uid://cq5deg4k2k78" path="res://assents/jp/backgroundjogo2.png" id="2_vkk0i"]
-[ext_resource type="Texture2D" uid="uid://tr0eh4wweptg" path="res://assents/jp/Projeto (20260226082008).png" id="3_nvwb7"]
-[ext_resource type="Script" uid="uid://byme5voge4nxd" path="res://scenes/main scenes/cloude/claude_interface.gd" id="4_mxq18"]
-[ext_resource type="PackedScene" uid="uid://3kjpwt6khs0" path="res://scenes/cardSlot.tscn" id="5_a7q58"]
-[ext_resource type="Script" uid="uid://vrmd5hxtegt7" path="res://scenes/main scenes/cloude/claude_card_manager.gd" id="6_d0hqo"]
-[ext_resource type="Script" uid="uid://dgniklo70ee2m" path="res://scenes/main scenes/cloude/claude_player_hand.gd" id="7_r484f"]
-[ext_resource type="Script" uid="uid://cbsvdwtdn0pmp" path="res://scenes/main scenes/cloude/claude_deck.gd" id="8_e53mm"]
-[ext_resource type="Script" uid="uid://byxnbmp5uk245" path="res://scenes/main scenes/cloude/claude_imput_manager.gd" id="9_nl1h6"]
+[ext_resource type="Script" uid="uid://7rgts2w8un3k" path="res://scenes/main scenes/cloude/cloude_interface.gd" id="2_h86ka"]
+[ext_resource type="Texture2D" uid="uid://cscurdhl8v3fy" path="res://assents/jp/nuvemcarta.png" id="3_d0hqo"]
+[ext_resource type="FontFile" uid="uid://bi5n0ab36d8ql" path="res://assents/jp/Amarante-Regular.ttf" id="3_r484f"]
+[ext_resource type="Script" uid="uid://vrmd5hxtegt7" path="res://scenes/main scenes/cloude/claude_card_manager.gd" id="3_t8cl0"]
+[ext_resource type="Script" uid="uid://dgniklo70ee2m" path="res://scenes/main scenes/cloude/claude_player_hand.gd" id="4_vkk0i"]
+[ext_resource type="Script" uid="uid://cbsvdwtdn0pmp" path="res://scenes/main scenes/cloude/claude_deck.gd" id="5_nvwb7"]
+[ext_resource type="Script" uid="uid://ek42hnfn0uer" path="res://scenes/main scenes/cloude/claude_input_manager.gd" id="6_mxq18"]
+[ext_resource type="PackedScene" uid="uid://3kjpwt6khs0" path="res://scenes/cardSlot.tscn" id="7_a7q58"]
+[ext_resource type="AudioStream" uid="uid://drxjhea6pmko2" path="res://assents/jp/arjun_thapa-cheasing-fast-beat-music-124540.mp3" id="8_t8cl0"]
+[ext_resource type="Texture2D" uid="uid://cq5deg4k2k78" path="res://assents/jp/backgroundjogo2.png" id="9_nvwb7"]
+[ext_resource type="Texture2D" uid="uid://tr0eh4wweptg" path="res://assents/jp/Projeto (20260226082008).png" id="10_mxq18"]
+[ext_resource type="Texture2D" uid="uid://cc3sn5bcicoh" path="res://assents/jp/seraqvai.png" id="12_r484f"]
+[ext_resource type="Texture2D" uid="uid://dtp6fowwep80g" path="res://assents/jp/faladevv.png" id="13_e53mm"]
 
 [node name="Cloude" type="Node2D" unique_id=1913107958]
 script = ExtResource("1_lwafn")
@@ -20,6 +25,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="voltar" type="Button" parent="Control" unique_id=2100503621]
+top_level = true
 layout_mode = 0
 offset_left = 1146.0
 offset_top = 648.0
@@ -27,74 +33,128 @@ offset_right = 1229.0
 offset_bottom = 682.0
 text = "voltar"
 
-[node name="backcloude" type="Sprite2D" parent="." unique_id=511406665]
-position = Vector2(640, 355)
-scale = Vector2(1.7256757, 1.459432)
-texture = ExtResource("2_vkk0i")
-
-[node name="o cara" type="Sprite2D" parent="backcloude" unique_id=677544298]
-position = Vector2(-207.99413, -0.5139179)
-scale = Vector2(0.81713, 0.68805295)
-texture = ExtResource("3_nvwb7")
-
-[node name="ClaudeInterface" type="Control" parent="." unique_id=2096067867]
+[node name="CloudeInterface" type="Control" parent="." unique_id=1534727335]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("4_mxq18")
+script = ExtResource("2_h86ka")
 
-[node name="FaseLabel" type="Label" parent="ClaudeInterface" unique_id=176961435]
+[node name="FaseLabel" type="Label" parent="CloudeInterface" unique_id=1436261668]
+top_level = true
 layout_mode = 0
-offset_left = 460.0
-offset_top = 25.0
-offset_right = 1260.0
-offset_bottom = 65.0
-theme_override_font_sizes/font_size = 20
-text = "fase 1 | puzzle 1/9 | acertos: 0 "
+offset_left = 915.0
+offset_top = 92.0
+offset_right = 1190.0
+offset_bottom = 113.0
+theme_override_colors/font_color = Color(0.8088058, 0.34133452, 0.14589536, 1)
+theme_override_fonts/font = ExtResource("3_r484f")
+text = " pergunta 1/9 | acertos : 0"
 
-[node name="CodigoLabel" type="Label" parent="ClaudeInterface" unique_id=1492350882]
+[node name="CodigoLabel" type="Label" parent="CloudeInterface" unique_id=1116029648]
+top_level = true
+visibility_layer = 512
+z_index = 5
 layout_mode = 0
-offset_left = 810.0
-offset_top = 196.0
-offset_right = 1410.0
-offset_bottom = 396.0
-theme_override_font_sizes/font_size = 20
-autowrap_mode = 2
+offset_left = 954.0
+offset_top = 289.0
+offset_right = 1094.0
+offset_bottom = 398.0
+theme_override_fonts/font = ExtResource("3_r484f")
 
-[node name="OutputLabel" type="Label" parent="ClaudeInterface" unique_id=1842669168]
+[node name="Nuvemcarta" type="Sprite2D" parent="CloudeInterface/CodigoLabel" unique_id=1693529500]
+top_level = true
+position = Vector2(1032, 325.5)
+scale = Vector2(0.36716405, 0.3177712)
+texture = ExtResource("3_d0hqo")
+
+[node name="OutputLabel" type="Label" parent="CloudeInterface" unique_id=71080744]
+top_level = true
 layout_mode = 0
-offset_left = 819.0
-offset_top = 152.0
-offset_right = 1419.0
-offset_bottom = 212.0
-theme_override_colors/font_color = Color(1, 1, 0.41568628, 1)
-theme_override_font_sizes/font_size = 22
-text = "Output: "
+offset_left = 956.0
+offset_top = 263.0
+offset_right = 1092.0
+offset_bottom = 329.0
+theme_override_colors/font_color = Color(0.7381577, 0, 0.07683108, 1)
+theme_override_fonts/font = ExtResource("3_r484f")
+text = "Output:"
 
-[node name="FeedbackLabel" type="Label" parent="ClaudeInterface" unique_id=276112144]
+[node name="FeedbackLabel" type="Label" parent="CloudeInterface" unique_id=1688569018]
+top_level = true
 layout_mode = 0
-offset_left = 812.0
-offset_top = 26.0
-offset_right = 1212.0
-offset_bottom = 76.0
-theme_override_font_sizes/font_size = 24
+offset_left = 645.0
+offset_top = 136.0
+offset_right = 771.0
+offset_bottom = 166.0
+theme_override_fonts/font = ExtResource("3_r484f")
+theme_override_font_sizes/font_size = 23
 
-[node name="CardSlot" parent="." unique_id=1090387939 instance=ExtResource("5_a7q58")]
-position = Vector2(632, 281)
+[node name="TimerLabel" type="Label" parent="CloudeInterface" unique_id=858760405]
+top_level = true
+layout_mode = 0
+offset_left = 653.0
+offset_top = 70.0
+offset_right = 788.0
+offset_bottom = 125.0
+theme_override_fonts/font = ExtResource("3_r484f")
 
-[node name="MainClaude" type="Node2D" parent="." unique_id=414717384]
+[node name="Temporizador" type="Timer" parent="CloudeInterface" unique_id=475573113]
 
-[node name="Claude_CardManager" type="Node2D" parent="MainClaude" unique_id=258327602]
-script = ExtResource("6_d0hqo")
+[node name="MainClaude" type="Node2D" parent="." unique_id=1087510913]
 
-[node name="Claude_PlayerHand" type="Node2D" parent="MainClaude" unique_id=929827819]
-script = ExtResource("7_r484f")
+[node name="Claude_CardManager" type="Node2D" parent="MainClaude" unique_id=1153890065]
+script = ExtResource("3_t8cl0")
 
-[node name="Claude_Deck" type="Node2D" parent="MainClaude" unique_id=1293589719]
-script = ExtResource("8_e53mm")
+[node name="Claude_PlayerHand" type="Node2D" parent="MainClaude" unique_id=346021812]
+script = ExtResource("4_vkk0i")
 
-[node name="Claude_InputManager" type="Node2D" parent="MainClaude" unique_id=1867836051]
-script = ExtResource("9_nl1h6")
+[node name="Claude_Deck" type="Node2D" parent="MainClaude" unique_id=1762910640]
+script = ExtResource("5_nvwb7")
+
+[node name="Claude_InputManager" type="Node2D" parent="MainClaude" unique_id=1505019037]
+script = ExtResource("6_mxq18")
+
+[node name="CardSlot" parent="." unique_id=1090387939 instance=ExtResource("7_a7q58")]
+top_level = true
+position = Vector2(742, 351)
+
+[node name="MusicaClaude" type="AudioStreamPlayer2D" parent="." unique_id=375182594]
+stream = ExtResource("8_t8cl0")
+pitch_scale = 1.07
+
+[node name="backcloud" type="Sprite2D" parent="." unique_id=1587496266]
+position = Vector2(640.00006, 355)
+scale = Vector2(1.7239863, 1.4295132)
+texture = ExtResource("9_nvwb7")
+
+[node name="Sprite2D" type="Sprite2D" parent="backcloud" unique_id=1879123267]
+position = Vector2(-209.25536, -8.736246)
+rotation = 0.0005579812
+scale = Vector2(0.81124216, 0.70613474)
+texture = ExtResource("10_mxq18")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=104463671]
+position = Vector2(463, 45.999992)
+rotation = -1.7797949
+scale = Vector2(0.78647566, 0.717743)
+texture = ExtResource("12_r484f")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1580180732]
+position = Vector2(489.07568, 687.56824)
+rotation = 1.6003122
+scale = Vector2(1.0084294, 0.7633813)
+skew = 0.013683319
+texture = ExtResource("12_r484f")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1966454224]
+position = Vector2(479.11023, 271.8848)
+rotation = 1.5202303
+scale = Vector2(0.76401407, 0.81839025)
+texture = ExtResource("12_r484f")
+
+[node name="Faladevv" type="Sprite2D" parent="." unique_id=582144458]
+position = Vector2(1019, 76)
+scale = Vector2(1.44, 1.2171428)
+texture = ExtResource("13_e53mm")
 
 [connection signal="pressed" from="Control/voltar" to="." method="_on_voltar_pressed"]

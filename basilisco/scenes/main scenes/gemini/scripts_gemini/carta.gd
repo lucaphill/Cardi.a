@@ -6,6 +6,7 @@ var can_click = true
 var tween
 var base_position
 var is_removing = false
+var base_scale = Vector2(0.8, 0.8)
 
 func set_value(v):
 	value = v
@@ -14,6 +15,7 @@ func set_value(v):
 func _ready():
 	base_position = position
 	add_to_group("cards")
+	scale = base_scale
 
 func toggle_select():
 	selected = !selected
@@ -33,11 +35,11 @@ func toggle_select():
 	
 	if selected:
 		tween.tween_property(self, "position", base_position + Vector2(0, -30), 0.2)
-		tween.parallel().tween_property(self, "scale", Vector2(1.2, 1.2), 0.2)
+		tween.parallel().tween_property(self, "scale", base_scale * 1.2, 0.2)
 		tween.parallel().tween_property(self, "rotation_degrees", rotation, 0.2)
 	else:
 		tween.tween_property(self, "position", base_position, 0.2)
-		tween.parallel().tween_property(self, "scale", Vector2(1, 1), 0.2)
+		tween.parallel().tween_property(self, "scale", base_scale, 0.2)
 		tween.parallel().tween_property(self, "rotation_degrees", 0, 0.2)
 
 func _on_area_2d_input_event(viewport, event, shape_idx):

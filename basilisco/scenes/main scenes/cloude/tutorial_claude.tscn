@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://c6b3rvei4ssna"]
+
+[ext_resource type="Script" uid="uid://dv4sp7446gnwb" path="res://tutorial_claude.gd" id="1_xwxob"]
+[ext_resource type="Texture2D" uid="uid://cq5deg4k2k78" path="res://assents/jp/backgroundjogo2.png" id="2_j5rir"]
+[ext_resource type="FontFile" uid="uid://bi5n0ab36d8ql" path="res://assents/jp/Amarante-Regular.ttf" id="3_4mtne"]
+[ext_resource type="Texture2D" uid="uid://cc3sn5bcicoh" path="res://assents/jp/seraqvai.png" id="4_4fqol"]
+[ext_resource type="Texture2D" uid="uid://cscurdhl8v3fy" path="res://assents/jp/nuvemcarta.png" id="5_xi5i1"]
+[ext_resource type="Texture2D" uid="uid://b7u1qkuad7fd6" path="res://assents/jp/claude-ai-icon.png" id="6_ceg7u"]
+
+[node name="TutorialClaude" type="Node2D" unique_id=557238614]
+script = ExtResource("1_xwxob")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=254749046]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1437646936]
+position = Vector2(639.99994, 359)
+scale = Vector2(1.7297297, 1.464503)
+texture = ExtResource("2_j5rir")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1618904420]
+offset_left = 484.0
+offset_top = 191.0
+offset_right = 954.0
+offset_bottom = 545.0
+theme_override_colors/default_color = Color(0.52657443, 0.32029125, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_4mtne")
+theme_override_font_sizes/normal_font_size = 24
+text = "Contra Claude:
+
+Bem-vindo a sessão do Claude. 
+	Para vencê-lo você deve completar os scripts em C em 3 fases de  dificuldade
+	com base no Output que aparecerá na caixa de nuvem na direira
+	cuidado com o tempo!"
+horizontal_alignment = 1
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="." unique_id=440092875]
+offset_left = 19.0
+offset_top = 283.0
+offset_right = 451.0
+offset_bottom = 582.0
+theme_override_colors/default_color = Color(0.28235295, 0.44705883, 1, 1)
+theme_override_fonts/normal_font = ExtResource("3_4mtne")
+text = "O claude AI, criado pela empresa de inteligência artificial  Anthropic, é um LLM de processamento de texto e imagem que  se destaca pelos seus princípios éticos estruturados no conceito de IA constitucional que preza pela redução de viéses negativos e pela otimização de seu comportamento e saída de dados comparados as suas concorrentes. 
+          O Claude e suas 3 versões distintas, Opus, sonnet e haiku,  cada uma com seu foco em capacidade,  equilibrio entre capacidade e velocidade e leveza respectivamente, são  modelos baseados em redes neurais que se destacam por sua capacidade alta de interpretar contexto e visuais devido a sua arquitetura de transformador e sua grande funcionalidade para criação e gerenciamento de texto e código "
+
+[node name="Label" type="Label" parent="." unique_id=1541093351]
+z_index = 5
+offset_left = 1035.0
+offset_top = 347.0
+offset_right = 1186.0
+offset_bottom = 475.0
+text = "Código e output
+estarão aqui"
+
+[node name="Seraqvai" type="Sprite2D" parent="." unique_id=1167205754]
+position = Vector2(249, -1)
+rotation = -0.08665031
+texture = ExtResource("4_4fqol")
+
+[node name="Seraqvai2" type="Sprite2D" parent="." unique_id=670293833]
+position = Vector2(748, 28)
+texture = ExtResource("4_4fqol")
+
+[node name="Seraqvai3" type="Sprite2D" parent="." unique_id=1833889247]
+position = Vector2(1243, 45)
+texture = ExtResource("4_4fqol")
+
+[node name="Seraqvai4" type="Sprite2D" parent="." unique_id=808625127]
+position = Vector2(175, 752)
+rotation = 0.19602212
+texture = ExtResource("4_4fqol")
+
+[node name="Seraqvai5" type="Sprite2D" parent="." unique_id=948290837]
+position = Vector2(656, 697)
+texture = ExtResource("4_4fqol")
+
+[node name="Seraqvai6" type="Sprite2D" parent="." unique_id=971608387]
+position = Vector2(1132, 733)
+texture = ExtResource("4_4fqol")
+
+[node name="Nuvemcarta" type="Sprite2D" parent="." unique_id=103138320]
+position = Vector2(1103, 388)
+scale = Vector2(0.3955224, 0.35993975)
+texture = ExtResource("5_xi5i1")
+
+[node name="ClaudeAiIcon" type="Sprite2D" parent="." unique_id=1131403074]
+position = Vector2(75.00001, 206.99998)
+scale = Vector2(0.23828125, 0.23046872)
+texture = ExtResource("6_ceg7u")
+
+[node name="Button" type="Button" parent="." unique_id=1870380781]
+top_level = true
+offset_left = 615.0
+offset_top = 487.0
+offset_right = 815.0
+offset_bottom = 546.0
+theme_override_colors/font_color = Color(0.47273564, 0.98594433, 0.8210613, 1)
+theme_override_colors/font_focus_color = Color(0.4745098, 0.9843137, 0.81960785, 1)
+theme_override_colors/font_pressed_color = Color(0.4745098, 0.9843137, 0.81960785, 1)
+theme_override_colors/font_hover_color = Color(0.4745098, 0.9843137, 0.81960785, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.4745098, 0.9843137, 0.81960785, 1)
+theme_override_colors/font_outline_color = Color(0.70879567, 0.2817078, 0.1329971, 1)
+text = "COMEÇAR"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
