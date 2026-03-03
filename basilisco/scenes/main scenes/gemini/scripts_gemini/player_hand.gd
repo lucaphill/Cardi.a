@@ -262,9 +262,9 @@ func _go_to_victory():
 
 func _go_to_defeat():
 	button_type = "derrota"
-	$Trascicoes/Fade_in.show()
-	$Trascicoes/Fade_in/Fade_in_Timer.start()
-	$Trascicoes/Fade_in/AnimationPlayer.play("fade_in")
+	$"../Trascicoes/Fade_in".show()
+	$"../Trascicoes/Fade_in/Fade_in_Timer".start()
+	$"../Trascicoes/Fade_in/AnimationPlayer".play("fade_in")
 
 func generate_enemy_intent():
 	var rand = randf()
