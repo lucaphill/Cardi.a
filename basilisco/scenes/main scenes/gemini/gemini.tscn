@@ -3,10 +3,13 @@
 [ext_resource type="Script" uid="uid://bqxt7w4dpiv3f" path="res://scenes/main scenes/gemini/scripts_gemini/deck.gd" id="1_1xp57"]
 [ext_resource type="Script" uid="uid://c3v1juxcj1qhr" path="res://scenes/main scenes/gemini/gemini.gd" id="1_krdfv"]
 [ext_resource type="Shader" uid="uid://dc85mm0slomk4" path="res://shaders/space.gdshader" id="2_5sutp"]
+[ext_resource type="PackedScene" uid="uid://b05j34cynjhjg" path="res://scenes/fade_in.tscn" id="2_soj72"]
 [ext_resource type="Script" uid="uid://dyx2ds865x05q" path="res://scenes/main scenes/gemini/scripts_gemini/player_hand.gd" id="2_vgfaa"]
 [ext_resource type="FontFile" uid="uid://dw6wfk8i82tbv" path="res://fonts/VCR_OSD_MONO_1.001.ttf" id="3_krdfv"]
+[ext_resource type="PackedScene" uid="uid://gpmt15d7adk8" path="res://scenes/fade_out.tscn" id="3_ygjv2"]
 [ext_resource type="Texture2D" uid="uid://n4uegk1w4egp" path="res://assents/sprites/gemini_ultra.png" id="6_ygjv2"]
 [ext_resource type="Texture2D" uid="uid://d00g671sqvey7" path="res://scenes/main scenes/gemini/sprites_gemini/Gemini_moldura.png" id="7_pvh61"]
+[ext_resource type="FontFile" uid="uid://d2625kwnfyjs8" path="res://fonts/runede-uniform-alternate.otf" id="8_jnx0q"]
 [ext_resource type="Texture2D" uid="uid://b10e6ngytcl8t" path="res://scenes/main scenes/gemini/sprites_gemini/ballon.png" id="8_pvh61"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yaqkf"]
@@ -138,8 +141,58 @@ expand_margin_top = 10.0
 expand_margin_right = 16.0
 expand_margin_bottom = 10.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vj8gf"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.6, 0, 0.047058824, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8r26s"]
+bg_color = Color(0.38928655, 0.38928664, 0.38928658, 0.7490196)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.6, 0, 0.047058824, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ev2pb"]
+bg_color = Color(0.08701607, 0.08701607, 0.08701607, 0.7490196)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_color = Color(0.6, 0, 0.047058824, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [node name="Gemini" type="Node2D" unique_id=1315091109]
 script = ExtResource("1_krdfv")
+
+[node name="Trascicoes" type="CanvasLayer" parent="." unique_id=538987521]
+
+[node name="Fade_in" parent="Trascicoes" unique_id=2070389534 instance=ExtResource("2_soj72")]
+visible = false
+
+[node name="Fade_in_Timer" type="Timer" parent="Trascicoes/Fade_in" unique_id=1605606802]
+
+[node name="Fade_out" parent="Trascicoes" unique_id=971055919 instance=ExtResource("3_ygjv2")]
+
+[node name="Fade_out_Timer" type="Timer" parent="Trascicoes/Fade_out" unique_id=604229300]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=12062457]
 layer = -1
@@ -256,6 +309,20 @@ bbcode_enabled = true
 text = "Próxima ação:"
 horizontal_alignment = 1
 
+[node name="Desistir" type="Button" parent="UI" unique_id=1923568000]
+z_index = 20
+layout_mode = 0
+offset_left = 9.0
+offset_top = 660.0
+offset_right = 123.0
+offset_bottom = 712.0
+theme_override_fonts/font = ExtResource("8_jnx0q")
+theme_override_font_sizes/font_size = 21
+theme_override_styles/normal = SubResource("StyleBoxFlat_vj8gf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_8r26s")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ev2pb")
+text = "Desistir"
+
 [node name="gemini_ultra" type="Sprite2D" parent="." unique_id=1447047571]
 position = Vector2(184, 363)
 texture = ExtResource("6_ygjv2")
@@ -271,5 +338,9 @@ position = Vector2(479.00003, 119)
 scale = Vector2(2.8203125, 2.65625)
 texture = ExtResource("8_pvh61")
 
+[connection signal="timeout" from="Trascicoes/Fade_in/Fade_in_Timer" to="." method="_on_fade_in_timer_timeout"]
+[connection signal="timeout" from="Trascicoes/Fade_in/Fade_in_Timer" to="Player_Hand" method="_on_fade_in_timer_timeout"]
+[connection signal="timeout" from="Trascicoes/Fade_out/Fade_out_Timer" to="." method="_on_fade_out_timer_timeout"]
 [connection signal="pressed" from="UI/HBoxContainer/Botao_fundir" to="Player_Hand" method="_on_botao_fundir_pressed"]
 [connection signal="pressed" from="UI/HBoxContainer/Botao_finalizar" to="Player_Hand" method="_on_botao_finalizar_pressed"]
+[connection signal="pressed" from="UI/Desistir" to="." method="_on_desistir_pressed"]

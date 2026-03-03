@@ -7,6 +7,7 @@ extends Node2D
 @onready var turn_timer = $TurnTimer
 @onready var intent_label = $"../UI/Intencao"
 
+var button_type = null
 
 var selected_cards = []
 var score = 0
@@ -243,13 +244,27 @@ func check_game_end():
 			return
 		elif enemy_score >= max_score:
 			call_deferred("_go_to_defeat")
+			
+
+func _on_fade_in_timer_timeout() -> void:
+	if button_type == "vitoria":
+		get_tree().change_scene_to_file("res://scenes/vitoria.tscn")
+	elif  button_type == "derrota":
+		get_tree().change_scene_to_file("res://scenes/derrota.tscn")
+	
 
 func _go_to_victory():
 	if get_tree():
-		get_tree().change_scene_to_file("res://scenes/vitoria.tscn")
+		button_type = "vitoria"
+		$"../Trascicoes/Fade_in".show()
+		$"../Trascicoes/Fade_in/Fade_in_Timer".start()
+		$"../Trascicoes/Fade_in/AnimationPlayer".play("fade_in")
 
 func _go_to_defeat():
-	get_tree().change_scene_to_file("res://scenes/derrota.tscn")
+	button_type = "derrota"
+	$Trascicoes/Fade_in.show()
+	$Trascicoes/Fade_in/Fade_in_Timer.start()
+	$Trascicoes/Fade_in/AnimationPlayer.play("fade_in")
 
 func generate_enemy_intent():
 	var rand = randf()
@@ -257,14 +272,14 @@ func generate_enemy_intent():
 	if rand < 0.5:
 	# ganha pontos
 		next_enemy_action = {
-		"ganha": randi_range(15, 20),
+		"ganha": randi_range(15, 27),
 		"tira": 0
 		}
 	elif rand < 0.9:
 	# ataca jogador
 		next_enemy_action = {
 		"ganha": 0,
-		"tira": randi_range(10, 16)
+		"tira": randi_range(10, 18)
 		}
 	else:
 	# ação híbrida 🔥

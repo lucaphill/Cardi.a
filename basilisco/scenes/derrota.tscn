@@ -1,14 +1,69 @@
 [gd_scene format=3 uid="uid://dmca3djxksnf8"]
 
 [ext_resource type="Script" uid="uid://dv750kimovfvk" path="res://scripts/derrota.gd" id="1_78d6e"]
-[ext_resource type="FontFile" uid="uid://dw6wfk8i82tbv" path="res://fonts/VCR_OSD_MONO_1.001.ttf" id="1_101bo"]
+[ext_resource type="FontFile" uid="uid://d2625kwnfyjs8" path="res://fonts/runede-uniform-alternate.otf" id="2_0ma0n"]
+[ext_resource type="Shader" uid="uid://dc85mm0slomk4" path="res://shaders/space.gdshader" id="2_m2nvm"]
+[ext_resource type="Texture2D" uid="uid://dqdr47s33xkdq" path="res://scenes/main scenes/gemini/sprites_gemini/patetico.jpg" id="3_m2nvm"]
+[ext_resource type="Texture2D" uid="uid://bwila76g8qcxy" path="res://scenes/main scenes/gemini/sprites_gemini/gemini_logo.png" id="4_wkuvr"]
+[ext_resource type="Texture2D" uid="uid://dps4fgv5vjijl" path="res://scenes/main scenes/gemini/sprites_gemini/brilhante_triste.jpg" id="5_de7w0"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_78d6e"]
-font = ExtResource("1_101bo")
-font_size = 78
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wkuvr"]
+shader = ExtResource("2_m2nvm")
+shader_parameter/bg_color = Color(0, 0, 0, 1)
+shader_parameter/offset = Vector2(0, 0)
+shader_parameter/bigStarSlow = 2.0
+shader_parameter/mediumStarSlow = 6.0
+shader_parameter/smallStarSlow = 8.0
+shader_parameter/smallStarAmount = 0.002
+shader_parameter/mediumStarAmount = 0.01
+shader_parameter/bigStarAmount = 0.02
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_petbh"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qh8fx"]
+bg_color = Color(0.4506483, 0.45064825, 0.45064837, 0.7411765)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_digsf"]
+bg_color = Color(0.12298488, 0.12298488, 0.12298488, 0.75686276)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [node name="derrota" type="Node2D" unique_id=450193340]
 script = ExtResource("1_78d6e")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1134707732]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=512581426]
+material = SubResource("ShaderMaterial_wkuvr")
+offset_right = 1290.0
+offset_bottom = 732.0
 
 [node name="Control" type="Control" parent="." unique_id=1118604344]
 layout_mode = 3
@@ -18,19 +73,43 @@ offset_bottom = 40.0
 
 [node name="Button" type="Button" parent="Control" unique_id=585294894]
 layout_mode = 0
-offset_left = 570.0
-offset_top = 374.0
-offset_right = 674.0
-offset_bottom = 426.0
+offset_left = 566.0
+offset_top = 599.0
+offset_right = 698.0
+offset_bottom = 660.0
+theme_override_fonts/font = ExtResource("2_0ma0n")
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_petbh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qh8fx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_digsf")
 text = "voltar"
 
-[node name="Label" type="Label" parent="Control" unique_id=699035453]
+[node name="Label" type="RichTextLabel" parent="Control" unique_id=477809937]
 layout_mode = 0
-offset_left = 480.0
-offset_top = 136.0
-offset_right = 800.0
-offset_bottom = 205.0
-text = "Derrota"
-label_settings = SubResource("LabelSettings_78d6e")
+offset_left = 457.0
+offset_top = 25.0
+offset_right = 823.0
+offset_bottom = 159.0
+theme_override_fonts/normal_font = ExtResource("2_0ma0n")
+theme_override_font_sizes/normal_font_size = 92
+bbcode_enabled = true
+text = "[shake][color=red]Derrota"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Patetico" type="Sprite2D" parent="." unique_id=1406088373]
+position = Vector2(523, 321.99997)
+scale = Vector2(0.525, 0.5441501)
+texture = ExtResource("3_m2nvm")
+
+[node name="GeminiLogo" type="Sprite2D" parent="." unique_id=1953724578]
+position = Vector2(468.99997, 245)
+scale = Vector2(0.29179674, 0.28203118)
+texture = ExtResource("4_wkuvr")
+
+[node name="BrilhanteTriste" type="Sprite2D" parent="." unique_id=1818358662]
+position = Vector2(742, 413)
+scale = Vector2(0.23444442, 0.14718749)
+texture = ExtResource("5_de7w0")
 
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]

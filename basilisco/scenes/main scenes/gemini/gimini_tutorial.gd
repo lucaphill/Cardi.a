@@ -31,6 +31,6 @@ func _on_fade_out_timer_timeout() -> void:
 
 func _on_fade_in_timer_timeout() -> void:
 	if (button_type == "voltar"):
-		get_tree().change_scene_to_file("res://scenes/main scenes/main_menu.tscn")
+		get_tree().change_scene_to_file("res://scenes/main scenes/boss_select.tscn")
 	elif (button_type == "continuar"):
 		get_tree().change_scene_to_file("res://scenes/main scenes/gemini/gemini.tscn")

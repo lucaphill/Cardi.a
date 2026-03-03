@@ -1,14 +1,77 @@
 [gd_scene format=3 uid="uid://dp1r6a1fq0xen"]
 
 [ext_resource type="Script" uid="uid://doppxs4anfbrv" path="res://scripts/vitoria.gd" id="1_3oowa"]
-[ext_resource type="FontFile" uid="uid://dw6wfk8i82tbv" path="res://fonts/VCR_OSD_MONO_1.001.ttf" id="2_7a54b"]
+[ext_resource type="Shader" uid="uid://dc85mm0slomk4" path="res://shaders/space.gdshader" id="2_nnk0s"]
+[ext_resource type="FontFile" uid="uid://d2625kwnfyjs8" path="res://fonts/runede-uniform-alternate.otf" id="3_desg2"]
+[ext_resource type="Texture2D" uid="uid://bwila76g8qcxy" path="res://scenes/main scenes/gemini/sprites_gemini/gemini_logo.png" id="4_r0lqn"]
+[ext_resource type="Texture2D" uid="uid://o3i1jvltuyut" path="res://scenes/main scenes/gemini/sprites_gemini/joinha.jpg" id="5_desg2"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_nnk0s"]
-font = ExtResource("2_7a54b")
-font_size = 66
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7hcg5"]
+shader = ExtResource("2_nnk0s")
+shader_parameter/bg_color = Color(0, 0, 0, 1)
+shader_parameter/offset = Vector2(0, 0)
+shader_parameter/bigStarSlow = 2.0
+shader_parameter/mediumStarSlow = 6.0
+shader_parameter/smallStarSlow = 8.0
+shader_parameter/smallStarAmount = 0.002
+shader_parameter/mediumStarAmount = 0.01
+shader_parameter/bigStarAmount = 0.02
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5hw06"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2p86a"]
+bg_color = Color(0.34706846, 0.34706825, 0.3470683, 0.654902)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yv7p2"]
+bg_color = Color(0.14117648, 0.14117648, 0.14117648, 0.81960785)
+border_width_left = 12
+border_width_top = 12
+border_width_right = 12
+border_width_bottom = 12
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
 
 [node name="Vitoria" type="Node2D" unique_id=1827862133]
 script = ExtResource("1_3oowa")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1840681953]
+layer = -1
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1549565640]
+material = SubResource("ShaderMaterial_7hcg5")
+custom_minimum_size = Vector2(1280, 720)
+layout_direction = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Control" type="Control" parent="." unique_id=123267149]
 layout_mode = 3
@@ -16,21 +79,45 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Label" type="Label" parent="Control" unique_id=769018342]
+[node name="Label" type="RichTextLabel" parent="Control" unique_id=531952554]
 layout_mode = 0
-offset_left = 475.0
-offset_top = 190.0
-offset_right = 784.0
-offset_bottom = 249.0
-text = "Vitoria!"
-label_settings = SubResource("LabelSettings_nnk0s")
+offset_left = 482.0
+offset_top = 58.0
+offset_right = 802.0
+offset_bottom = 183.0
+theme_override_fonts/normal_font = ExtResource("3_desg2")
+theme_override_font_sizes/normal_font_size = 94
+bbcode_enabled = true
+text = "[rainbow freq=0.1 sat=1.0 val=0.8][wave freq=4 amp=50]Vitoria!"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Button" type="Button" parent="Control" unique_id=1346967092]
 layout_mode = 0
-offset_left = 549.0
-offset_top = 451.0
-offset_right = 693.0
-offset_bottom = 517.0
+offset_left = 568.0
+offset_top = 577.0
+offset_right = 712.0
+offset_bottom = 643.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5hw06")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2p86a")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yv7p2")
 text = "voltar"
+
+[node name="GeminiLogo" type="Sprite2D" parent="Control" unique_id=746685729]
+position = Vector2(394, 124.999985)
+rotation = -0.17625272
+scale = Vector2(0.19687499, 0.18984374)
+texture = ExtResource("4_r0lqn")
+
+[node name="GeminiLogo" type="Sprite2D" parent="Control/GeminiLogo" unique_id=463224053]
+position = Vector2(2380.3208, 439.6383)
+rotation = 0.46750164
+scale = Vector2(1.0252236, 1.003762)
+texture = ExtResource("4_r0lqn")
+
+[node name="Joinha" type="Sprite2D" parent="Control" unique_id=629218906]
+position = Vector2(639, 360.00003)
+scale = Vector2(0.22319457, 0.19679691)
+texture = ExtResource("5_desg2")
 
 [connection signal="pressed" from="Control/Button" to="." method="_on_button_pressed"]
