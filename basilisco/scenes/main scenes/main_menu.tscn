@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ccab81eyhxo7n" path="res://scripts/main_menu.gd" id="1_hwpy7"]
 [ext_resource type="PackedScene" uid="uid://b05j34cynjhjg" path="res://scenes/fade_in.tscn" id="2_3gmrm"]
+[ext_resource type="FontFile" uid="uid://dw6wfk8i82tbv" path="res://fonts/VCR_OSD_MONO_1.001.ttf" id="2_dsrqp"]
 [ext_resource type="Texture2D" uid="uid://degitd5fdt1m3" path="res://assents/sprites/basilisco.png" id="2_h4jmp"]
 [ext_resource type="Texture2D" uid="uid://b6nslpnb017va" path="res://assents/sprites/main_menu.png" id="2_hwpy7"]
 [ext_resource type="PackedScene" uid="uid://gpmt15d7adk8" path="res://scenes/fade_out.tscn" id="2_lypit"]
@@ -43,6 +44,17 @@ shader_parameter/glow_threshold = 0.65
 
 [node name="main_menu" type="Node2D" unique_id=1228729446]
 script = ExtResource("1_hwpy7")
+
+[node name="versao" type="RichTextLabel" parent="." unique_id=888935041]
+offset_left = 1176.0
+offset_top = 661.0
+offset_right = 1279.0
+offset_bottom = 720.0
+rotation = -0.08901179
+theme_override_fonts/normal_font = ExtResource("2_dsrqp")
+theme_override_fonts/bold_font = ExtResource("2_dsrqp")
+theme_override_font_sizes/normal_font_size = 21
+text = "1.1"
 
 [node name="Transcicoes" type="CanvasLayer" parent="." unique_id=139642995]
 

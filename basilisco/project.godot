@@ -14,7 +14,7 @@ config/name="basilisco"
 run/main_scene="uid://dbfa4mxkvdbs6"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/bg_color=Color(0, 0, 0, 1)
-config/icon="res://assents/icon.svg"
+config/icon="uid://bfee8pfidl0p1"
 
 [autoload]
 

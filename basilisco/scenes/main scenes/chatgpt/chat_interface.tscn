@@ -174,9 +174,9 @@ horizontal_alignment = 1
 [node name="ChatGPT_points" type="RichTextLabel" parent="." unique_id=553300048]
 layout_mode = 0
 offset_left = 310.0
-offset_top = 2.0
+offset_top = 9.0
 offset_right = 465.0
-offset_bottom = 76.0
+offset_bottom = 83.0
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("2_hm057")
 theme_override_fonts/bold_font = ExtResource("2_hm057")

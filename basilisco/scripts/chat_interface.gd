@@ -134,11 +134,11 @@ func update_timer(color: String = "white"):
 
 
 func chat_game_end():
-	if score_count > chat_score_count + 500:
+	if score_count > chat_score_count + 250:
 		call_deferred("_go_to_victory")
 		BackgroundMusic_menu._play_music(main_music)
 			
-	elif score_count + 150 < chat_score_count:
+	elif 150 <= chat_score_count:
 		call_deferred("_go_to_defeat")
 		BackgroundMusic_menu._play_music(main_music)
 

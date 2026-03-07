@@ -13,6 +13,16 @@ script = ExtResource("1_42fmu")
 position = Vector2(785, 435)
 
 [node name="Chat_interface" parent="." unique_id=2012376245 instance=ExtResource("2_oucoa")]
+offset_left = -1.0
+offset_top = -3.0
+offset_right = -1.0
+offset_bottom = -3.0
+
+[node name="MainGPT" parent="." unique_id=2050167096 instance=ExtResource("2_3nb76")]
+
+[node name="GptUltra" type="Sprite2D" parent="." unique_id=523491530]
+position = Vector2(191, 358)
+texture = ExtResource("5_oucoa")
 
 [node name="Control" type="Control" parent="." unique_id=219834149]
 layout_mode = 3
@@ -21,18 +31,11 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Voltar" type="Button" parent="Control" unique_id=396378183]
-visible = false
 layout_mode = 0
-offset_left = 1133.0
-offset_top = 661.0
-offset_right = 1262.0
-offset_bottom = 698.0
-text = "voltar"
-
-[node name="MainGPT" parent="." unique_id=2050167096 instance=ExtResource("2_3nb76")]
-
-[node name="GptUltra" type="Sprite2D" parent="." unique_id=523491530]
-position = Vector2(191, 358)
-texture = ExtResource("5_oucoa")
+offset_left = 1194.0
+offset_top = 676.0
+offset_right = 1267.0
+offset_bottom = 707.0
+text = "desistir"
 
 [connection signal="pressed" from="Control/Voltar" to="." method="_on_voltar_pressed"]
